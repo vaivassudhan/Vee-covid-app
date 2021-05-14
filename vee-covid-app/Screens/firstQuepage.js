@@ -14,19 +14,64 @@ import {
     ImageBackground
 } from 'react-native';
 import { Avatar, Button, Card, Title, Paragraph, Divider } from 'react-native-paper';
+import Icon from 'react-native-vector-icons/Ionicons';
 export function firstQuepage({navigation}){
         return (
-            <View style={styles.centeredView}>
-            <Card style={styles.card_rej}>
-               <Card.Content>
-                   <Text style={[styles.text_footer]}>Are You Feeling Good ?</Text>
-               </Card.Content>
-               <Divider/>
+            // <View style={styles.centeredView}>
+            // <StatusBar backgroundColor='#fff' barStyle="light-content"/>
+            // <Card style={styles.card_rej}>
+            //    <Card.Content>
+            //        <Text style={[styles.title]}>Are You Feeling Good Today?</Text>
+            //    </Card.Content>
+            //    <Divider/>
+            //        <Card.Actions >
+            //        <Card style={[styles.cardbutton]}>
+            //             <TouchableOpacity onPress={() =>{alert("Please Wear Mask!!!")}} >
+            //             <Card.Content style={styles.buttoncardcontent}>
+            //                 <Image style={{width:50,height:50,alignSelf:'center'}} source={require('../assets/smile2.png')}/>
+            //                 <Text style={styles.buttontext}> Good! </Text>
+            //             </Card.Content>
+            //             </TouchableOpacity>
+            //         </Card>
+            //         <Card style={[styles.cardbutton]}>
+            //         <TouchableOpacity onPress={() =>{alert("Please Wear Mask!!!")}} >
+            //             <Card.Content style={styles.buttoncardcontent}>
+            //                 <Image style={{width:50,height:50,alignSelf:'center'}} source={require('../assets/revsmile.png')}/>
+            //                 <Text style={styles.buttontext2}> Not Well </Text>
+            //             </Card.Content>
+            //         </TouchableOpacity>
+            //         </Card>
+            //        </Card.Actions>
+            //        <View style={[styles.innerbox]}/>
+            //      </Card>
+            // </View>
+            <View style={styles.home}>
+            <View style={styles.innerbox}>
+            <Icon.Button name="arrow-back-sharp" size={50} backgroundColor="#ffffff" color="#4446AD"></Icon.Button> 
+            <StatusBar backgroundColor='#4446AD' barStyle="light-content"/>
+              
+                    <Text style={[styles.title]}>Are You Feeling Good Today?</Text>
+                    
                    <Card.Actions >
-                     <Button color={'rgb(54,118,203)'} onPress={()=>{alert("Please Wear Mask!!!")}}>Yes</Button>
-                     <Button color={'red'} onPress={()=>{navigation.navigate('Symptoms')}}>No</Button>
+                   <Card style={[styles.cardbutton]}>
+                        <TouchableOpacity onPress={() =>{alert("Please Wear Mask!!!")}} >
+                        <Card.Content style={styles.buttoncardcontent}>
+                            <Image style={{width:50,height:50,alignSelf:'center'}} source={require('../assets/smile2.png')}/>
+                            <Text style={styles.buttontext}> Good! </Text>
+                        </Card.Content>
+                        </TouchableOpacity>
+                    </Card>
+                    <Card style={[styles.cardbutton]}>
+                    <TouchableOpacity onPress={() =>{alert("Please Wear Mask!!!")}} >
+                        <Card.Content style={styles.buttoncardcontent}>
+                            <Image style={{width:50,height:50,alignSelf:'center'}} source={require('../assets/revsmile.png')}/>
+                            <Text style={styles.buttontext2}> Not Well </Text>
+                        </Card.Content>
+                    </TouchableOpacity>
+                    </Card>
                    </Card.Actions>
-                 </Card>
+            </View>
+            <Text>Progress Bar</Text>
             </View>
         )
     }
@@ -34,46 +79,53 @@ export function firstQuepage({navigation}){
 export default firstQuepage
 
 const styles = StyleSheet.create({
-  card: {
-      marginLeft:12,
-          marginRight:12,
-          width: '93%',
-          marginTop:40,
-          marginBottom:2,
-          flexDirection:'row',
-          shadowColor: "#000",
-          shadowOffset: {
-              width: 0,
-              height: 4,
-          },
-          shadowOpacity: 0.30,
-          shadowRadius: 11.95,
-          borderRadius:20,
-  
-          elevation: 8,
-    },
-  
-    footer: {
-      flex: 3,
-      backgroundColor: '#fff',
-      borderTopLeftRadius: 30,
-      borderTopRightRadius: 30,
-      paddingHorizontal: 20,
-      paddingVertical: 30
+     title: {    
+      //color: '#05375a',
+      color: '#4446AD',
+      marginLeft:20,
+      marginTop:20,
+      fontSize: 30,
+      fontWeight: 'bold'
   },
-    card_rej: {
-      alignContent:'center',
-      margin: 16,
-      marginTop:15,
-      backgroundColor:'#fff',
-      borderRadius:12,
-      marginBottom:15,
-      width:'93%',
-      elevation: 6,
+    cardbutton:{
+      alignItems:'center',
+      backgroundColor:'white',
+      width:'40%',
+      margin:15,
+      justifyContent:'center',
+      shadowColor: "#000",
+      shadowOffset: {
+          width: 0,
+          height: 9,
+      },
+      shadowOpacity: 0.48,
+      shadowRadius: 11.95,
+      borderRadius:20,
+      elevation: 2,
     },
-    centeredView: {
-      flex: 1,
-      justifyContent: "center",
-      alignItems: "center",
+    buttontext:{
+      color:'#008000',
+      fontSize:18,
+      marginTop:12,
+      fontWeight: 'bold'
     },
+    buttontext2:{
+      color:'#dd3c3c',
+      fontSize:18,
+      marginTop:12,
+      fontWeight: 'bold'
+    },
+    home:{
+      width:"100%",
+      height:"100%",
+      backgroundColor:"#4446AD",
+},
+innerbox:{
+      width:"96%",
+      height:"80%",
+      borderRadius:30,
+      marginHorizontal:"2%",
+      marginTop:"2%",
+      backgroundColor:"white"
+},
   });
