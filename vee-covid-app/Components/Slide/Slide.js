@@ -16,14 +16,18 @@ import {
 import Ion from 'react-native-vector-icons/Ionicons';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import { LinearGradient } from 'expo-linear-gradient';
+const accent1='#4446AD';
+const accent2='#F4BC1C';
+const lightText='#151410';
+const border='rgb(90,95,190)';
 const slides = [
     {
       key: 'one',
-      title: 'Welcome to CoviCare',
+      title: 'Welcome to Vee+Covid@Home ',
       text: 'Your Home Quarantine Assistant',
       image: require('../../assets/415.jpg'),
-      backgroundColor: 'rgb(255, 255, 255)',
-      backgroundColor1: 'rgb(255,255,255)',
+      backgroundColor: accent1,
+      backgroundColor1: accent1,
       
     },
     {
@@ -36,8 +40,8 @@ const slides = [
     },
     {
       key: 'three',
-      title: 'Report',
-      text: 'Monitor your report anytime',
+      title: 'Remedy',
+      text: 'Get remedy of your choice ',
       image: require('../../assets/history.jpg'),
       backgroundColor: 'rgb(255, 255, 255)',
       backgroundColor1: 'rgb(255,255,255)',
@@ -75,7 +79,7 @@ export class Slide extends Component {
       <View style={styles.buttonCircle}>
         <Ion
           name="md-arrow-forward-sharp"
-          color="rgba(255, 255, 255, .9)"
+          color={lightText}
           size={24}
         />
       </View>
@@ -114,7 +118,7 @@ const styles = StyleSheet.create({
   buttonCircle: {
     width: 40,
     height: 40,
-    backgroundColor: 'rgba(0, 0, 0, .2)',
+    backgroundColor: accent2,
     borderRadius: 20,
     justifyContent: 'center',
     alignItems: 'center',
@@ -131,21 +135,13 @@ const styles = StyleSheet.create({
     // marginVertical: 32,
   },
   text: {
-    color: 'rgba(34,88,163, 0.8)',
+    color: 'white',
     textAlign: 'center',
   },
   title: {
     fontSize: 22,
-    color: 'rgb(34,88,163)',
+    color: 'white',
     textAlign: 'center',
-  },
-  buttonCircle: {
-    width: 40,
-    height: 40,
-    backgroundColor: 'rgba(0, 0, 0, .2)',
-    borderRadius: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
   },
 });
  
