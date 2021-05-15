@@ -6,8 +6,6 @@ import {
     TouchableOpacity, 
     TextInput,
     Platform,
-    View,
-    Text,
     StyleSheet ,
     StatusBar,
     Alert,
@@ -15,19 +13,16 @@ import {
     ImageBackground
 } from 'react-native';
 import { Avatar, Button, Card, Title, Paragraph, Divider } from 'react-native-paper';
+import {Checkbox, Assets, Text, View, Colors, Spacings} from 'react-native-ui-lib'; 
 import Icon from 'react-native-vector-icons/Ionicons';
 import { TagSelect } from 'react-native-tag-select';
-export class Remdeselect extends React.Component{
-    
-    
-    render(){
-
-        const data = [
-            { id: 1, label: 'Allopathy' },
-            { id: 2, label: 'Homeopathy' },
-            { id: 3, label: 'Ayurvedha' },
-          ];
-
+export default class Sympto extends React.Component{
+    render() {
+      const data = [
+        { id: 1, label: 'Allopathy' },
+        { id: 2, label: 'Homeopathy' },
+        { id: 3, label: 'Ayurvedha' },
+      ];
         return (
             <View style={styles.home}>
             <View style={styles.innerbox}>
@@ -36,84 +31,27 @@ export class Remdeselect extends React.Component{
             </View>
             <StatusBar backgroundColor='#4446AD' barStyle="light-content"/>
               
-            <Text style={[styles.title]}>Select Any One?</Text>
-            <TagSelect
-          data={data}
-          max={1}
-          ref={(tag) => {
-            this.tag = tag;
-          }}
-          onMaxError={() => {
-            Alert.alert('Ops', 'Max reached');
-          }}
-        />
-        <View>
-        {JSON.stringify(this.tag)=='Allopathy' && (
-                            <View>
-                            <Card style={styles.card}>
-                                <Card.Content>
-                                <View style={{flexDirection:'row'}}>
-                                <Image style={{width:120,height:100,marginRight:10}} source={require('../assets/allopathy.jpg')}/>
-                                <Title style={[styles.title,{alignSelf:'center',marginLeft:22,}]}>Allopathy</Title>
-                                </View>
-                                <Divider style={{marginBottom:16}}/>
-                                
-                                <View style={{flex:1,flexDirection:'column'}}>
-                                           
-                                <View style={{flex:1,flexDirection:'column'}}>
-                                <Paragraph style={{width:'100%',flex:1,flexWrap: 'wrap',color: '#34495e',fontSize:18}}>Antihistamines, Throat Lozenges and Menthol give instant relief in case of cold</Paragraph>
-                                </View>
-                               </View> 
-                            </Card.Content>
-                            </Card>
-                            </View>
-        )}
-        {JSON.stringify(this.tag)=='Homeopathy' && (
-                            <View>
-                            <Card style={styles.card}>
-                            <Card.Content>
-                            <View style={{flexDirection:'row'}}>
-                            <Image style={{width:120,height:100,marginRight:10}} source={require('../assets/homeopathy.jpg')}/>
-                            <Title style={[styles.title,{alignSelf:'center',marginLeft:22,}]}>Homeopathy</Title>
-                            </View>
-                            <Divider style={{marginBottom:16}}/>
-                            <View style={{flex:1,flexDirection:'column'}}>
-                                        <View style={{flex:1}} key={i} key={i}>
-                                        <Paragraph style={{flex:1,flexWrap: 'wrap',color: '#34495e',fontSize:18}}>Arsenicum Album and Natrum muriaticum are the best Homeopathic medicine for cold, sore throat and many other diseases</Paragraph>
-                                        </View>
-                            </View>
-                            </Card.Content>
-                            </Card>
-                            </View>
-        )}
-        {JSON.stringify(this.tag)=='Ayurvedha' && (
-                            <View>
-                            <Card style={styles.card}>
-                            <Card.Content>
-                            <View style={{flexDirection:'row'}}>
-                            <Image style={{width:120,height:100,marginRight:10}} source={require('../assets/ayurvedha.png')}/>
-                            <Title style={[styles.title,{alignSelf:'center',marginLeft:22,}]}>Ayurvedha</Title>
-                            </View>
-                            <Divider style={{marginBottom:16}}/>
-                            
-                                <View style={{flex:1,flexDirection:'column'}}>
-                                            <View style={{flex:1}}>
-                                        <Paragraph style={{flex:1,flexWrap: 'wrap',color: '#34495e',fontSize:18}}>Crushed Garlic, Ginger in lemon tea and cinnamon are the widely used remedy for fever</Paragraph>
-                                            </View>
-                               
-                            </View>
-                            </Card.Content>
-                            </Card>
-                            </View>)}
-        </View>
+            <Text style={[styles.title]}>Choose your Remedy Type?</Text>
+            <View style={{marginTop:"15%",marginLeft:'10%'}}>
+                    <TagSelect
+                      theme="info"
+                        data={data}
+                        itemStyle={styles.customItem} 
+                        ref={(tag) => {
+                              this.tag = tag;
+                        }}
+                      />   
             </View>
-            <Text>Progress Bar</Text>
+            <View style={{alignSelf:'flex-end'}}>
+                <Button style={[styles.nextbutton,{backgroundColor:'rgb(51,124,247)', marginRight:20}]} mode="contained" onPress={() => this.props.navigation.navigate('Remedy',{RemedyType:JSON.stringify(this.tag.itemsSelected),selected:JSON.stringify(this.props.route.params.selected)})}>
+                        Next
+                </Button>
+                </View>
+            </View>
             </View>
         )
     }
 }
-
-export default Remdeselect
 
 const styles = StyleSheet.create({
      title: {    
@@ -167,39 +105,5 @@ innerbox:{
       marginHorizontal:"2%",
       marginTop:"2%",
       backgroundColor:"white"
-},   card: {
-    alignContent:'center',
-    margin: 16,
-    marginTop:15,
-
-borderRadius:12,
-marginBottom:15,
-width:'93%',
-elevation: 6,
 },
-paragraph: {
-margin: 2,
-fontSize: 25,
-fontWeight: 'bold',
-textAlign: 'center',
-// color: '#34495e',
-
-},
-cardText:{
-fontSize:30,
-padding:10
-},
-text_header: {
-color: '#34495e',
-fontWeight: 'bold',
-fontSize: 20,
-textAlign:'center'
-},
-title_nodata:{
-fontWeight: 'bold',
-textAlign:'center',
-},
-title:{
-  fontSize:24,
-}
   });
