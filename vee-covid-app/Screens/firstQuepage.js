@@ -54,21 +54,21 @@ progressbar:{
          width: 0,
          height: 9,
      },
-     shadowOpacity: 0.48,
+     shadowOpacity: 0.80,
      shadowRadius: 11.95,
      borderRadius:20,
      borderColor:'grey',
      elevation: 2,
    },
    buttontext:{
-     color:'#00a000',
-     fontSize:18,
+     color:colors.accent1,
+     fontSize:14,
      marginTop:12,
      fontWeight: 'bold'
    },
    buttontext2:{
-     color:'#dd3c3c',
-     fontSize:18,
+     color:colors.accent1,
+     fontSize:14,
      marginTop:12,
      fontWeight: 'bold'
    },
@@ -100,9 +100,9 @@ innerbox:{
             <Icon.Button name="chevron-back-sharp" size={40} backgroundColor={colors.backcard} color={colors.accent1}></Icon.Button> 
             </View>
             <StatusBar backgroundColor={colors.accent1} barStyle="light-content"/>
-                    <Text style={[styles.title]}>Are You Feeling Good Today?</Text>
+                    <Text style={[styles.title]}>Are you feeling good today?</Text>
                     
-                   <Card.Actions >
+                   <Card.Actions style={{paddingHorizontal:30}}>
                    <Card style={[styles.cardbutton]}>
                         <TouchableOpacity onPress={() =>{alert("Please Wear Mask!!!")}} >
                         <Card.Content style={{marginTop:20}}>
