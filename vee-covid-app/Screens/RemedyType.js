@@ -23,6 +23,7 @@ const lightText='#151410';
 const border='rgb(90,95,190)';
 export default class Sympto extends React.Component{
     render() {
+      
       const data = [
         { id: 1, label: 'Allopathy' },
         { id: 2, label: 'Homeopathy' },

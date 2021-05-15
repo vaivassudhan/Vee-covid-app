@@ -8,6 +8,7 @@ import Slide from '../Slide/Slide';
 import firstQuepage from '../../Screens/firstQuepage';
 import Symptoms from '../../Screens/Symptoms';
 import Remedeselect from '../../Screens/RemedyType';
+import Remedy from '../../Screens/Remedy';
 const RootStack = createStackNavigator();
 
 const RootStackScreen = ({navigation}) => (
@@ -17,6 +18,7 @@ const RootStackScreen = ({navigation}) => (
         <RootStack.Screen name="firstQuepage" component={firstQuepage}/>
         <RootStack.Screen name="Symptoms" component={Symptoms}/>
         <RootStack.Screen name="Remedeselect" component={Remedeselect}/>
+        <RootStack.Screen name="Remedy" component={Remedy}/>
     </RootStack.Navigator>
 );
 
