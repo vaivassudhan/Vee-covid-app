@@ -19,6 +19,7 @@ import { TagSelect } from 'react-native-tag-select';
 
 export default class Sympto extends React.Component{
     render() {
+      
       const data = [
         { id: 1, label: 'Allopathy' },
         { id: 2, label: 'Homeopathy' },
