@@ -68,7 +68,9 @@ export default class Sympto extends React.Component{
                 <View style={{marginTop:'1%'}}>
                   <Progress.Bar progress={0.67} width={250} borderColor={accent1} color={accent2} backgroundColor={'rgb(90,95,190)'}  height={5} marginLeft={'10%'} marginTop={'7%'} />
                 </View>
-                <TouchableOpacity style={{marginLeft:'5%',backgroundColor:accent2,height:35,borderRadius:20,width:'15%',marginTop:'2%'}}>
+                <TouchableOpacity
+                 style={{marginLeft:'5%',backgroundColor:accent2,height:35,borderRadius:20,width:'15%',marginTop:'2%'}}
+                 onPress={() => this.props.navigation.navigate('Remedeselect',{selected:JSON.stringify(this.tag.itemsSelected)})}>
                   <Text style={{alignContent:'center',justifyContent:'center',alignSelf:'center',marginTop:'15%'}}><Icon name="chevron-forward-sharp" color={lightText}></Icon><Icon name="chevron-forward-sharp" color={lightText}></Icon></Text>
                 </TouchableOpacity>
               </View>
