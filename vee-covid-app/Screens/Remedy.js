@@ -18,6 +18,7 @@ import { Avatar, Button, Card, Title, Paragraph, Divider } from 'react-native-pa
 import Icon from 'react-native-vector-icons/Ionicons';
 import * as Progress from 'react-native-progress';
 import { useTheme } from '@react-navigation/native';
+import {FontAwesome,AntDesign} from 'react-native-vector-icons';
 export function firstQuepage(props){
   const [symptoms ,setSymptoms] =useState([])
   const [Type , setType] = useState([])
@@ -138,8 +139,11 @@ innerbox:{
             <View style={styles.home}>
               <SafeAreaView>
             <View style={styles.innerbox}>
-            <View style={{marginTop:30,marginLeft:10}}>       
-            <Icon.Button name="chevron-back-sharp" size={40} backgroundColor={colors.backcard} color={colors.accent1}></Icon.Button> 
+            <View style={{marginTop:30,marginLeft:"7%"}}>       
+            {/* <Icon.Button name="chevron-with-circle-left" size={40} backgroundColor={colors.backcard} color={colors.accent1}></Icon.Button>  */}
+            <TouchableOpacity onPress={() =>{navigation.goBack()}} >
+            <FontAwesome name = 'angle-left' size ={40} backgroundColor={colors.backcard} color={colors.accent1}/>
+            </TouchableOpacity>
             </View>
             <StatusBar backgroundColor={colors.accent1} barStyle="light-content"/>
                     <Text style={[styles.title]}>Remedies:</Text>

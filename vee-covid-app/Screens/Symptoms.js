@@ -18,6 +18,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import * as Progress from 'react-native-progress';
 import { TagSelect } from 'react-native-tag-select';
 import { useTheme } from '@react-navigation/native';
+import {FontAwesome,AntDesign} from 'react-native-vector-icons';
 const accent1='#4446AD';
 const border='rgb(90,95,190)';
 const accent2='#F4BC1C';
@@ -40,8 +41,11 @@ export default class Sympto extends React.Component{
           <View style={styles.home}>
               <SafeAreaView>
             <View style={styles.innerbox}>
-            <View style={{marginTop:30,marginLeft:10}}>       
-            <Icon.Button name="chevron-back-sharp" size={40} backgroundColor="#FFFFFF" color="#4446AD"></Icon.Button> 
+            <View style={{marginTop:30,marginLeft:"7%"}}>       
+            {/* <Icon.Button name="chevron-with-circle-left" size={40} backgroundColor={colors.backcard} color={colors.accent1}></Icon.Button>  */}
+            <TouchableOpacity onPress={() =>{navigation.goBack()}} >
+            <FontAwesome name = 'angle-left' size ={40} backgroundColor={colors.backcard} color={colors.accent1}/>
+            </TouchableOpacity>
             </View>
             <StatusBar backgroundColor='#4446AD' barStyle="light-content"/>
               
