@@ -37,7 +37,7 @@ export default class Sympto extends React.Component{
                 <View style={{marginTop:30,marginLeft:"7%"}}>       
             {/* <Icon.Button name="chevron-with-circle-left" size={40} backgroundColor={colors.backcard} color={colors.accent1}></Icon.Button>  */}
             <TouchableOpacity onPress={() =>{navigation.goBack()}} >
-            <FontAwesome name = 'angle-left' size ={40} backgroundColor={colors.backcard} color={colors.accent1}/>
+            <FontAwesome name = 'angle-left' size ={40} backgroundColor={'white'} color={accent1}/>
             </TouchableOpacity>
             </View>
                 <StatusBar backgroundColor='#4446AD' barStyle="light-content"/>
