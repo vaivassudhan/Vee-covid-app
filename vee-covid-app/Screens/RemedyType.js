@@ -12,10 +12,11 @@ import {
     Image,
     ImageBackground
 } from 'react-native';
-import { Avatar, Button, Card, Title, Paragraph, Divider } from 'react-native-paper';
+import { Avatar, Button, Card, Title, Paragraph, Divider,useTheme } from 'react-native-paper';
 import {Checkbox, Assets, Text, View, Colors, Spacings} from 'react-native-ui-lib'; 
 import Icon from 'react-native-vector-icons/Ionicons';
 import { TagSelect } from 'react-native-tag-select';
+
 export default class Sympto extends React.Component{
     render() {
       const data = [
