@@ -19,6 +19,7 @@ const SplashScreen = ({navigation}) => {
     const bg= colors.accent1
     const bg2=colors.backcard
     const accent=colors.accent2
+    const lightText=colors.lightText
     console.log(colors)
     
 const styles = StyleSheet.create({
@@ -44,12 +45,12 @@ const styles = StyleSheet.create({
         height: height_logo
     },
     title: {
-        color: accent,
+        color: 'white',
         fontSize: 30,
         fontWeight: 'bold'
     },
     text: {
-        color: accent,
+        color: 'white',
         marginTop:5
     },
     button: {
@@ -65,8 +66,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row'
     },
     textSign: {
-        color:bg,
-        fontWeight: 'bold'
+        color: lightText,
+        fontWeight:'500'
     }
   });
     return (
@@ -121,7 +122,7 @@ const styles = StyleSheet.create({
                 }}
                 onPress={()=>navigation.navigate('Slide')}
             >
-             <Text style={styles.textSign}>Get Started<Icon name="chevron-forward-sharp" color={bg}></Icon> </Text>
+             <Text style={styles.textSign}>Get Started<Icon name="chevron-forward-sharp" color={lightText}></Icon> </Text>
             
             </TouchableOpacity>
             </View>
