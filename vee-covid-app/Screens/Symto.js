@@ -39,7 +39,7 @@ export default class Sympto extends React.Component{
             <StatusBar backgroundColor='#4446AD' barStyle="light-content"/>
               
             <Text style={[styles.title]}>Do you have any of these?</Text>
-            <View>
+            <View style={{marginTop:"15%",marginLeft:"15%"}}>
                     <TagSelect
                       theme="info"
                         data={data}
@@ -56,7 +56,6 @@ export default class Sympto extends React.Component{
         )
     }
 }
-export default Sympto
 
 const styles = StyleSheet.create({
      title: {    
