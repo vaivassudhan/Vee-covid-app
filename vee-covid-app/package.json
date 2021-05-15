@@ -22,6 +22,8 @@
     "react-native-paper": "^4.8.1",
     "react-native-reanimated": "^2.1.0",
     "react-native-screens": "^3.2.0",
+    "react-native-tag-select": "^2.0.0",
+    "react-native-tag-selector": "0.0.3",
     "react-native-ui-lib": "^5.24.1",
     "react-native-vector-icons": "^8.1.0",
     "react-native-web": "~0.13.12"
