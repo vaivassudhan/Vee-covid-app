@@ -36,7 +36,8 @@ const App = () => {
       accent1:'#4446AD',
       accent2:'#F4BC1C',
       accent3:'#f6a499',
-      backcard:'#ffffff'
+      backcard:'#ffffff',
+      lightText:'#151410'
     }
   }
   
