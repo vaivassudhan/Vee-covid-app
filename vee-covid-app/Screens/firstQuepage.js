@@ -18,6 +18,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import * as Progress from 'react-native-progress';
 import { useTheme } from '@react-navigation/native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { color } from 'react-native-reanimated';
 export function firstQuepage({navigation}){
   const { colors } = useTheme();
   const styles = StyleSheet.create({
@@ -29,17 +30,20 @@ export function firstQuepage({navigation}){
      fontSize: 30,
      fontWeight: 'bold'
  },
- questions: {    
-   //color: '#05375a',
-   color: colors.accent2,
-   marginLeft:90,
-   marginTop:30,
-   fontSize: 20,
-   fontWeight: 'bold'
+ question: {    
+   color: 'white',
+   marginLeft:'10%',
+   marginTop:'10%',
+   fontSize: 16,
+   fontWeight: '400'
+},
+progressbar:{
+  marginLeft:'5%',
+
 },
    cardbutton:{
      alignItems:'center',
-     backgroundColor:colors.accent3,
+    //  backgroundColor:colors.accent3,
      height:'50%',
      width:'35%',
      marginTop:'5%',
@@ -69,8 +73,9 @@ export function firstQuepage({navigation}){
      fontWeight: 'bold'
    },
    next:{
-     marginLeft:300,
-     width:100,
+     marginTop:'5%',
+     marginLeft:'75%',
+     width:'10%',
      borderRadius:15,
    },
    home:{
@@ -88,41 +93,13 @@ innerbox:{
 },
  });
         return (
-            // <View style={styles.centeredView}>
-            // <StatusBar backgroundColor='#fff' barStyle="light-content"/>
-            // <Card style={styles.card_rej}>
-            //    <Card.Content>
-            //        <Text style={[styles.title]}>Are You Feeling Good Today?</Text>
-            //    </Card.Content>
-            //    <Divider/>
-            //        <Card.Actions >
-            //        <Card style={[styles.cardbutton]}>
-            //             <TouchableOpacity onPress={() =>{alert("Please Wear Mask!!!")}} >
-            //             <Card.Content style={styles.buttoncardcontent}>
-            //                 <Image style={{width:50,height:50,alignSelf:'center'}} source={require('../assets/smile2.png')}/>
-            //                 <Text style={styles.buttontext}> Good! </Text>
-            //             </Card.Content>
-            //             </TouchableOpacity>
-            //         </Card>
-            //         <Card style={[styles.cardbutton]}>
-            //         <TouchableOpacity onPress={() =>{alert("Please Wear Mask!!!")}} >
-            //             <Card.Content style={styles.buttoncardcontent}>
-            //                 <Image style={{width:50,height:50,alignSelf:'center'}} source={require('../assets/revsmile.png')}/>
-            //                 <Text style={styles.buttontext2}> Not Well </Text>
-            //             </Card.Content>
-            //         </TouchableOpacity>
-            //         </Card>
-            //        </Card.Actions>
-            //        <View style={[styles.innerbox]}/>
-            //      </Card>
-            // </View>
             <View style={styles.home}>
+              <SafeAreaView>
             <View style={styles.innerbox}>
             <View style={{marginTop:30,marginLeft:10}}>       
             <Icon.Button name="chevron-back-sharp" size={40} backgroundColor={colors.backcard} color={colors.accent1}></Icon.Button> 
             </View>
             <StatusBar backgroundColor={colors.accent1} barStyle="light-content"/>
-              
                     <Text style={[styles.title]}>Are You Feeling Good Today?</Text>
                     
                    <Card.Actions >
@@ -144,12 +121,16 @@ innerbox:{
                     </Card>
                    </Card.Actions>
             </View>
-            <Text style={[styles.questions]} >Progress:</Text>
-              <Progress.Bar progress={0.3} width={250} color={colors.accent2} borderColor='white' height={10} marginLeft={30} marginTop={10} />
-            <Divider/>
-            <Card style={[styles.next]}>
-            <Icon.Button name="chevron-forward-sharp" size={35} backgroundColor={colors.accent2} color={colors.accent1} borderRadius={15}>Next</Icon.Button> 
-            </Card>
+              <Text style={[styles.question]} >Question 1/4</Text>
+            <View >
+              <Progress.Bar progress={0.3} width={250} borderColor={colors.accent1} color={colors.accent2} backgroundColor={'rgb(90,95,190)'}  height={5} marginLeft={'10%'} marginTop={'5%'} />
+              <Divider/>
+              <Card style={[styles.next]}>
+              <Icon.Button name="chevron-forward-sharp" size={15}  backgroundColor={colors.accent2} color={colors.accent1} borderRadius={15}></Icon.Button> 
+              </Card>
+            </View>
+            
+            </SafeAreaView>
             </View>
         )
     }
