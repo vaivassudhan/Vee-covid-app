@@ -15,6 +15,7 @@ import {
 } from 'react-native';
 import { Avatar, Button, Card, Title, Paragraph, Divider } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/Ionicons';
+import * as Progress from 'react-native-progress';
 export function firstQuepage({navigation}){
         return (
             // <View style={styles.centeredView}>
@@ -47,7 +48,9 @@ export function firstQuepage({navigation}){
             // </View>
             <View style={styles.home}>
             <View style={styles.innerbox}>
-            <Icon.Button name="arrow-back-sharp" size={50} backgroundColor="#ffffff" color="#4446AD"></Icon.Button> 
+            <View style={{marginTop:30,marginLeft:10}}>       
+            <Icon.Button name="chevron-back-sharp" size={40} backgroundColor="#FFFFFF" color="#4446AD"></Icon.Button> 
+            </View>
             <StatusBar backgroundColor='#4446AD' barStyle="light-content"/>
               
                     <Text style={[styles.title]}>Are You Feeling Good Today?</Text>
@@ -55,23 +58,28 @@ export function firstQuepage({navigation}){
                    <Card.Actions >
                    <Card style={[styles.cardbutton]}>
                         <TouchableOpacity onPress={() =>{alert("Please Wear Mask!!!")}} >
-                        <Card.Content style={styles.buttoncardcontent}>
-                            <Image style={{width:50,height:50,alignSelf:'center'}} source={require('../assets/smile2.png')}/>
+                        <Card.Content style={{marginTop:20}}>
+                            <Image style={{width:50,height:50,alignSelf:'center'}} source={require('../assets/smile.png')}/>
                             <Text style={styles.buttontext}> Good! </Text>
                         </Card.Content>
                         </TouchableOpacity>
                     </Card>
                     <Card style={[styles.cardbutton]}>
                     <TouchableOpacity onPress={() =>{alert("Please Wear Mask!!!")}} >
-                        <Card.Content style={styles.buttoncardcontent}>
-                            <Image style={{width:50,height:50,alignSelf:'center'}} source={require('../assets/revsmile.png')}/>
+                        <Card.Content style={{marginTop:20}}>
+                            <Image style={{width:50,height:50,alignSelf:'center'}} source={require('../assets/revsmile2.png')}/>
                             <Text style={styles.buttontext2}> Not Well </Text>
                         </Card.Content>
                     </TouchableOpacity>
                     </Card>
                    </Card.Actions>
             </View>
-            <Text>Progress Bar</Text>
+            <Text style={[styles.questions]} >Progress:</Text>
+              <Progress.Bar progress={0.3} width={250} color='#f4bc1c' borderColor='white' height={10} marginLeft={30} marginTop={10} />
+            <Divider/>
+            <Card style={[styles.next]}>
+            <Icon.Button name="chevron-forward-sharp" size={35} backgroundColor="#f4bc1c" color="#4446AD" borderRadius={15}>Next</Icon.Button> 
+            </Card>
             </View>
         )
     }
@@ -82,16 +90,26 @@ const styles = StyleSheet.create({
      title: {    
       //color: '#05375a',
       color: '#4446AD',
-      marginLeft:20,
+      marginLeft:30,
       marginTop:20,
       fontSize: 30,
       fontWeight: 'bold'
   },
+  questions: {    
+    //color: '#05375a',
+    color: '#ffffff',
+    marginLeft:90,
+    marginTop:30,
+    fontSize: 20,
+    fontWeight: 'bold'
+},
     cardbutton:{
       alignItems:'center',
       backgroundColor:'white',
-      width:'40%',
-      margin:15,
+      height:'50%',
+      width:'35%',
+      marginTop:'5%',
+      margin:25,
       justifyContent:'center',
       shadowColor: "#000",
       shadowOffset: {
@@ -101,6 +119,7 @@ const styles = StyleSheet.create({
       shadowOpacity: 0.48,
       shadowRadius: 11.95,
       borderRadius:20,
+      borderColor:'grey',
       elevation: 2,
     },
     buttontext:{
@@ -114,6 +133,11 @@ const styles = StyleSheet.create({
       fontSize:18,
       marginTop:12,
       fontWeight: 'bold'
+    },
+    next:{
+      marginLeft:300,
+      width:100,
+      borderRadius:15,
     },
     home:{
       width:"100%",
