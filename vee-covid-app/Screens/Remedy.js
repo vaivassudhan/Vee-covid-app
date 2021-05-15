@@ -106,7 +106,7 @@ progressbar:{
 },
 innerbox:{
      width:"96%",
-     height:"80%",
+     height:"90%",
      borderRadius:30,
      marginHorizontal:"2%",
      marginTop:"2%",
@@ -183,19 +183,6 @@ innerbox:{
                </Card.Content>
                <Divider/>
             </Card>
-            </View>
-            <View style={{}}>
-              <Text style={[styles.question]} >Question 1/4</Text>
-              <View style={{flexDirection:'row'}}>
-                <View style={{marginTop:'1%'}}>
-                  <Progress.Bar progress={0.3} width={250} borderColor={colors.accent1} color={colors.accent2} backgroundColor={'rgb(90,95,190)'}  height={5} marginLeft={'10%'} marginTop={'7%'} />
-                </View>
-                <Card style={{marginLeft:'5%',backgroundColor:colors.accent1,width:'15%',marginTop:'2%'}}>
-                <TouchableOpacity style={{backgroundColor:colors.accent2,height:35,borderRadius:20}}>
-                  <Text style={{alignContent:'center',justifyContent:'center',alignSelf:'center',marginTop:'15%'}}><Icon name="chevron-forward-sharp" color={colors.lightText}></Icon><Icon name="chevron-forward-sharp" color={colors.lightText}></Icon></Text>
-                </TouchableOpacity>
-                </Card>
-              </View>
             </View>
             </SafeAreaView>
             </View>
