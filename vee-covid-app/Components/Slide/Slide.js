@@ -15,13 +15,19 @@ import {
 } from 'react-native';
 import Ion from 'react-native-vector-icons/Ionicons';
 import AppIntroSlider from 'react-native-app-intro-slider';
+import * as Animatable from 'react-native-animatable';
 import { LinearGradient } from 'expo-linear-gradient';
-import { useTheme } from '@react-navigation/native';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import Feather from 'react-native-vector-icons/Feather';
+import * as Notifications from 'expo-notifications'
+import * as Permissions from 'expo-permissions';
+import Constants from 'expo-constants';
+import { useTheme } from 'react-native-paper';
 
 const slides = [
     {
       key: 'one',
-      title: 'Welcome to Vee+Covid@Home',
+      title: 'Welcome to CoviCare',
       text: 'Your Home Quarantine Assistant',
       image: require('../../assets/415.jpg'),
       backgroundColor: 'rgb(255, 255, 255)',
@@ -38,8 +44,8 @@ const slides = [
     },
     {
       key: 'three',
-      title: 'Remedy',
-      text: 'Remedy in the type of medication you like',
+      title: 'Report',
+      text: 'Monitor your report anytime',
       image: require('../../assets/history.jpg'),
       backgroundColor: 'rgb(255, 255, 255)',
       backgroundColor1: 'rgb(255,255,255)',
@@ -54,47 +60,6 @@ export class Slide extends Component {
     }
   }
   _renderItem = ({ item }) => {
-    const { colors } = useTheme();
-    
-const styles = StyleSheet.create({
-  buttonCircle: {
-    width: 40,
-    height: 40,
-    backgroundColor: 'rgba(0, 0, 0, .2)',
-    borderRadius: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  slide: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    // backgroundColor: 'blue',
-  },
-  image: {
-    width: 390,
-    height: 300,
-    // marginVertical: 32,
-  },
-  text: {
-    color: 'rgba(34,88,163, 0.8)',
-    textAlign: 'center',
-  },
-  title: {
-    fontSize: 22,
-    color: 'rgb(34,88,163)',
-    textAlign: 'center',
-  },
-  buttonCircle: {
-    width: 40,
-    height: 40,
-    backgroundColor: 'rgba(0, 0, 0, .2)',
-    borderRadius: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
- 
     return (
       <LinearGradient colors={[
         item.backgroundColor,
@@ -139,7 +104,7 @@ const styles = StyleSheet.create({
     // User finished the introduction. Show real app through
     // navigation or simply by controlling state
     // this.setState({ showRealApp: true });
-    this.props.navigation.navigate('firstQuepage')
+    this.props.navigation.navigate('Register')
   }
   render() {
     if (this.state.showRealApp) {
@@ -152,3 +117,43 @@ const styles = StyleSheet.create({
 }
 
 export default Slide
+
+const styles = StyleSheet.create({
+  buttonCircle: {
+    width: 40,
+    height: 40,
+    backgroundColor: 'rgba(0, 0, 0, .2)',
+    borderRadius: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  slide: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    // backgroundColor: 'blue',
+  },
+  image: {
+    width: 390,
+    height: 300,
+    // marginVertical: 32,
+  },
+  text: {
+    color: 'rgba(34,88,163, 0.8)',
+    textAlign: 'center',
+  },
+  title: {
+    fontSize: 22,
+    color: 'rgb(34,88,163)',
+    textAlign: 'center',
+  },
+  buttonCircle: {
+    width: 40,
+    height: 40,
+    backgroundColor: 'rgba(0, 0, 0, .2)',
+    borderRadius: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
+ 
