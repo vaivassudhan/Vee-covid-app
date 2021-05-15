@@ -35,16 +35,16 @@ const slides = [
       title: 'Symptoms ',
       text: 'Remedies for your symptoms at one place',
       image: require('../../assets/report.jpg'),
-      backgroundColor: 'rgb(250, 250, 250)',
-      backgroundColor1: 'rgb(250,250,250)',
+      backgroundColor: accent1,
+      backgroundColor1: accent1,
     },
     {
       key: 'three',
       title: 'Remedy',
       text: 'Get remedy of your choice ',
       image: require('../../assets/history.jpg'),
-      backgroundColor: 'rgb(255, 255, 255)',
-      backgroundColor1: 'rgb(255,255,255)',
+      backgroundColor: accent1,
+      backgroundColor1: accent1,
     }
   ];
 
