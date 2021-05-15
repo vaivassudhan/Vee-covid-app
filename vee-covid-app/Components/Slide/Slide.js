@@ -15,15 +15,7 @@ import {
 } from 'react-native';
 import Ion from 'react-native-vector-icons/Ionicons';
 import AppIntroSlider from 'react-native-app-intro-slider';
-import * as Animatable from 'react-native-animatable';
 import { LinearGradient } from 'expo-linear-gradient';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import Feather from 'react-native-vector-icons/Feather';
-import * as Notifications from 'expo-notifications'
-import * as Permissions from 'expo-permissions';
-import Constants from 'expo-constants';
-import { useTheme } from 'react-native-paper';
-
 const slides = [
     {
       key: 'one',
