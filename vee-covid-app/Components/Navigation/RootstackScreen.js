@@ -7,7 +7,7 @@ import Slide from '../Slide/Slide';
 
 import firstQuepage from '../../Screens/firstQuepage';
 import Symptoms from '../../Screens/Symptoms';
-import Remedeselect from '../../Screens/Remedeselect';
+import Remedeselect from '../../Screens/RemedyType';
 const RootStack = createStackNavigator();
 
 const RootStackScreen = ({navigation}) => (
