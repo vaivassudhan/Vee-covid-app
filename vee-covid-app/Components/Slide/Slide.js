@@ -16,11 +16,12 @@ import {
 import Ion from 'react-native-vector-icons/Ionicons';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import { LinearGradient } from 'expo-linear-gradient';
+import { useTheme } from '@react-navigation/native';
 
 const slides = [
     {
       key: 'one',
-      title: 'Welcome to CoviCare',
+      title: 'Welcome to Vee+Covid@Home',
       text: 'Your Home Quarantine Assistant',
       image: require('../../assets/415.jpg'),
       backgroundColor: 'rgb(255, 255, 255)',
@@ -37,8 +38,8 @@ const slides = [
     },
     {
       key: 'three',
-      title: 'Report',
-      text: 'Monitor your report anytime',
+      title: 'Remedy',
+      text: 'Remedy in the type of medication you like',
       image: require('../../assets/history.jpg'),
       backgroundColor: 'rgb(255, 255, 255)',
       backgroundColor1: 'rgb(255,255,255)',
@@ -53,6 +54,47 @@ export class Slide extends Component {
     }
   }
   _renderItem = ({ item }) => {
+    const { colors } = useTheme();
+    
+const styles = StyleSheet.create({
+  buttonCircle: {
+    width: 40,
+    height: 40,
+    backgroundColor: 'rgba(0, 0, 0, .2)',
+    borderRadius: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  slide: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    // backgroundColor: 'blue',
+  },
+  image: {
+    width: 390,
+    height: 300,
+    // marginVertical: 32,
+  },
+  text: {
+    color: 'rgba(34,88,163, 0.8)',
+    textAlign: 'center',
+  },
+  title: {
+    fontSize: 22,
+    color: 'rgb(34,88,163)',
+    textAlign: 'center',
+  },
+  buttonCircle: {
+    width: 40,
+    height: 40,
+    backgroundColor: 'rgba(0, 0, 0, .2)',
+    borderRadius: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
+ 
     return (
       <LinearGradient colors={[
         item.backgroundColor,
@@ -110,43 +152,3 @@ export class Slide extends Component {
 }
 
 export default Slide
-
-const styles = StyleSheet.create({
-  buttonCircle: {
-    width: 40,
-    height: 40,
-    backgroundColor: 'rgba(0, 0, 0, .2)',
-    borderRadius: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  slide: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    // backgroundColor: 'blue',
-  },
-  image: {
-    width: 390,
-    height: 300,
-    // marginVertical: 32,
-  },
-  text: {
-    color: 'rgba(34,88,163, 0.8)',
-    textAlign: 'center',
-  },
-  title: {
-    fontSize: 22,
-    color: 'rgb(34,88,163)',
-    textAlign: 'center',
-  },
-  buttonCircle: {
-    width: 40,
-    height: 40,
-    backgroundColor: 'rgba(0, 0, 0, .2)',
-    borderRadius: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
- 
