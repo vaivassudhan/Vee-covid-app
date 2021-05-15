@@ -96,7 +96,7 @@ export class Slide extends Component {
     // User finished the introduction. Show real app through
     // navigation or simply by controlling state
     // this.setState({ showRealApp: true });
-    this.props.navigation.navigate('Register')
+    this.props.navigation.navigate('firstQuepage')
   }
   render() {
     if (this.state.showRealApp) {
