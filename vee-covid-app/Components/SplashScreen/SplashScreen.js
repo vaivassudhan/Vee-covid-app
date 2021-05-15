@@ -12,13 +12,66 @@ import {
 import { Button } from 'react-native-paper';
 import * as Animatable from 'react-native-animatable';
 import { useTheme } from '@react-navigation/native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const SplashScreen = ({navigation}) => {
     const { colors } = useTheme();
-
+    const bg= colors.accent1
+    const bg2=colors.backcard
+    const accent=colors.accent2
+    console.log(colors)
+    
+const styles = StyleSheet.create({
+    container: {
+      flex: 1, 
+      // backgroundColor: '#a6ddff'
+    },
+    header: {
+        flex: 2,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    footer: {
+        flex: 1,
+        backgroundColor: bg,
+        borderTopLeftRadius: 30,
+        borderTopRightRadius: 30,
+        paddingVertical: 50,
+        paddingHorizontal: 30
+    },
+    logo: {
+        width: height_logo,
+        height: height_logo
+    },
+    title: {
+        color: accent,
+        fontSize: 30,
+        fontWeight: 'bold'
+    },
+    text: {
+        color: accent,
+        marginTop:5
+    },
+    button: {
+        alignItems: 'flex-end',
+        marginTop: 30
+    },
+    signIn: {
+        width: 150,
+        height: 40,
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 50,
+        flexDirection: 'row'
+    },
+    textSign: {
+        color:bg,
+        fontWeight: 'bold'
+    }
+  });
     return (
       <View style={styles.container}>
-          <StatusBar backgroundColor='#a6ddff' barStyle="light-content"/>
+          <StatusBar backgroundColor={bg} barStyle="light-content"/>
         <View style={styles.header}>
             <Animatable.Image 
                 animation="bounceIn"
@@ -30,13 +83,11 @@ const SplashScreen = ({navigation}) => {
         </View>
         <Animatable.View 
             style={[styles.footer, {
-                backgroundColor: 'rgb(54,118,203)'
+                backgroundColor: bg
             }]}
             animation="fadeInUpBig"
         >
-            <Text style={[styles.title, {
-                color: 'white'
-            }]}>Home Quarantine Assistance</Text>
+            <Text style={[styles.title]}>Home Quarantine Assistance</Text>
             <Text style={styles.text} >for a better tomorrow</Text>
             <View style={styles.button}>
             {/* <TouchableOpacity onPress={()=>navigation.navigate('Slide')}>
@@ -64,12 +115,13 @@ const SplashScreen = ({navigation}) => {
                 justifyContent:'center',
                 width:150,
                 height:50,
-                backgroundColor:'rgb(34,88,163)',
+                backgroundColor:accent,
+                color:bg,
                 borderRadius:25,
                 }}
                 onPress={()=>navigation.navigate('Slide')}
             >
-             <Text style={styles.textSign}>Get Started</Text>
+             <Text style={styles.textSign}>Get Started<Icon name="chevron-forward-sharp" color={bg}></Icon> </Text>
             
             </TouchableOpacity>
             </View>
@@ -82,52 +134,3 @@ export default SplashScreen;
 
 const {height} = Dimensions.get("screen");
 const height_logo = height * 0.28;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1, 
-    // backgroundColor: '#a6ddff'
-  },
-  header: {
-      flex: 2,
-      justifyContent: 'center',
-      alignItems: 'center'
-  },
-  footer: {
-      flex: 1,
-      backgroundColor: '#fff',
-      borderTopLeftRadius: 30,
-      borderTopRightRadius: 30,
-      paddingVertical: 50,
-      paddingHorizontal: 30
-  },
-  logo: {
-      width: height_logo,
-      height: height_logo
-  },
-  title: {
-      color: '#05375a',
-      fontSize: 30,
-      fontWeight: 'bold'
-  },
-  text: {
-      color: 'white',
-      marginTop:5
-  },
-  button: {
-      alignItems: 'flex-end',
-      marginTop: 30
-  },
-  signIn: {
-      width: 150,
-      height: 40,
-      justifyContent: 'center',
-      alignItems: 'center',
-      borderRadius: 50,
-      flexDirection: 'row'
-  },
-  textSign: {
-      color: 'white',
-      fontWeight: 'bold'
-  }
-});
