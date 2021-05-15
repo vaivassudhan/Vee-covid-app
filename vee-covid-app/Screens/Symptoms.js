@@ -50,8 +50,12 @@ export default class Sympto extends React.Component{
                         }}
                       />   
             </View>
+            <View style={{alignSelf:'flex-end'}}>
+                <Button style={[styles.nextbutton,{backgroundColor:'rgb(51,124,247)', marginRight:20}]} mode="contained" onPress={() => this.props.navigation.navigate('Remedeselect',{selected:JSON.stringify(this.tag.itemsSelected)})}>
+                        Next
+                </Button>
+                </View>
             </View>
-            <Text>Progress Bar</Text>
             </View>
         )
     }
