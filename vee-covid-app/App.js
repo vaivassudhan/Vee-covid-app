@@ -32,9 +32,9 @@ const App = () => {
       ...PaperDefaultTheme.colors,
       background: '#efefef',
       text: '#000000',
-      text_secondary:'3c3c3c',
-      accent1:'#b2b9ff',
-      accent2:'#eee3df',
+      text_secondary:'#F4BC1C',
+      accent1:'#4446AD',
+      accent2:'#F4BC1C',
       accent3:'#f6a499',
       backcard:'#ffffff'
     }
