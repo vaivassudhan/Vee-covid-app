@@ -32,7 +32,7 @@ export function firstQuepage({navigation}){
  },
  question: {    
    color: 'white',
-   marginLeft:'10%',
+   marginLeft:'7%',
    marginTop:'10%',
    fontSize: 16,
    fontWeight: '400'
@@ -121,15 +121,22 @@ innerbox:{
                     </Card>
                    </Card.Actions>
             </View>
+            <View style={{}}>
               <Text style={[styles.question]} >Question 1/4</Text>
-            <View >
-              <Progress.Bar progress={0.3} width={250} borderColor={colors.accent1} color={colors.accent2} backgroundColor={'rgb(90,95,190)'}  height={5} marginLeft={'10%'} marginTop={'5%'} />
-              <Divider/>
-              <Card style={[styles.next]}>
-              <Icon.Button name="chevron-forward-sharp" size={15}  backgroundColor={colors.accent2} color={colors.accent1} borderRadius={15}></Icon.Button> 
-              </Card>
+              <View style={{flexDirection:'row'}}>
+                <View style={{marginTop:'1%'}}>
+                  <Progress.Bar progress={0.3} width={250} borderColor={colors.accent1} color={colors.accent2} backgroundColor={'rgb(90,95,190)'}  height={5} marginLeft={'10%'} marginTop={'7%'} />
+                </View>
+                <Card style={{marginLeft:'5%',backgroundColor:colors.accent1,width:'15%',marginTop:'2%'}}>
+                <TouchableOpacity style={{backgroundColor:colors.accent2,height:35,borderRadius:20}}>
+                  <Text style={{alignContent:'center',justifyContent:'center',alignSelf:'center',marginTop:'15%'}}><Icon name="chevron-forward-sharp" color={colors.lightText}></Icon><Icon name="chevron-forward-sharp" color={colors.lightText}></Icon></Text>
+                </TouchableOpacity>
+                  {/* <Butoon></Butoon> */}
+                  {/* <Icon.Button name="chevron-forward-sharp" size={30}  backgroundColor={colors.accent2} color={colors.lightText} borderRadius={15}></Icon.Button>  */}
+                  {/* <Icon.Button name="chevron-forward-sharp" size={30}  backgroundColor={colors.accent2} color={colors.lightText} borderRadius={15}></Icon.Button>  */}
+                </Card>
+              </View>
             </View>
-            
             </SafeAreaView>
             </View>
         )
