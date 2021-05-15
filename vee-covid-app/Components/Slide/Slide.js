@@ -42,7 +42,7 @@ const slides = [
       key: 'three',
       title: 'Remedy',
       text: 'Get remedy of your choice ',
-      image: require('../../assets/history.jpg'),
+      image: require('../../assets/7882.jpg'),
       backgroundColor: accent1,
       backgroundColor1: accent1,
     }
