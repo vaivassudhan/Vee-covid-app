@@ -15,7 +15,12 @@ import {
 import { Avatar, Button, Card, Title, Paragraph, Divider } from 'react-native-paper';
 import {Checkbox, Assets, Text, View, Colors, Spacings} from 'react-native-ui-lib'; 
 import Icon from 'react-native-vector-icons/Ionicons';
+import * as Progress from 'react-native-progress';
 import { TagSelect } from 'react-native-tag-select';
+import { useTheme } from '@react-navigation/native';
+const accent1='#4446AD';
+const accent2='#F4BC1C';
+const lightText='#151410';
 export default class Sympto extends React.Component{
     render() {
         const data = [
@@ -31,7 +36,8 @@ export default class Sympto extends React.Component{
           { id: 10, label: 'Diarrhea' },
         ];
         return (
-            <View style={styles.home}>
+          <View style={styles.home}>
+              <SafeAreaView>
             <View style={styles.innerbox}>
             <View style={{marginTop:30,marginLeft:10}}>       
             <Icon.Button name="chevron-back-sharp" size={40} backgroundColor="#FFFFFF" color="#4446AD"></Icon.Button> 
@@ -50,12 +56,24 @@ export default class Sympto extends React.Component{
                         }}
                       />   
             </View>
-            <View style={{alignSelf:'flex-end'}}>
+            {/* <View style={{alignSelf:'flex-end'}}>
                 <Button style={[styles.nextbutton,{backgroundColor:'rgb(51,124,247)', marginRight:20}]} mode="contained" onPress={() => this.props.navigation.navigate('Remedeselect',{selected:JSON.stringify(this.tag.itemsSelected)})}>
                         Next
                 </Button>
-                </View>
+            </View> */}
             </View>
+            <View style={{}}>
+              <Text style={[styles.question]} >Question 2/3</Text>
+              <View style={{flexDirection:'row'}}>
+                <View style={{marginTop:'1%'}}>
+                  <Progress.Bar progress={0.67} width={250} borderColor={accent1} color={accent2} backgroundColor={'rgb(90,95,190)'}  height={5} marginLeft={'10%'} marginTop={'7%'} />
+                </View>
+                <TouchableOpacity style={{marginLeft:'5%',backgroundColor:accent2,height:35,borderRadius:20,width:'15%',marginTop:'2%'}}>
+                  <Text style={{alignContent:'center',justifyContent:'center',alignSelf:'center',marginTop:'15%'}}><Icon name="chevron-forward-sharp" color={lightText}></Icon><Icon name="chevron-forward-sharp" color={lightText}></Icon></Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+            </SafeAreaView>
             </View>
         )
     }
@@ -106,9 +124,20 @@ const styles = StyleSheet.create({
       height:"100%",
       backgroundColor:"#4446AD",
 },
+question: {    
+  color: 'white',
+  marginLeft:'7%',
+  marginTop:'10%',
+  fontSize: 16,
+  fontWeight: '400'
+},
+progressbar:{
+  marginLeft:'5%',
+
+},
 innerbox:{
-      width:"96%",
-      height:"70%",
+  width:"96%",
+  height:"80%",
       borderRadius:30,
       marginHorizontal:"2%",
       marginTop:"2%",
