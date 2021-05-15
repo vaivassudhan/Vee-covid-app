@@ -36,7 +36,7 @@ export default class Sympto extends React.Component{
                 <View style={styles.innerbox}>
                 <View style={{marginTop:30,marginLeft:"7%"}}>       
             {/* <Icon.Button name="chevron-with-circle-left" size={40} backgroundColor={colors.backcard} color={colors.accent1}></Icon.Button>  */}
-            <TouchableOpacity onPress={() =>{navigation.goBack()}} >
+            <TouchableOpacity onPress={() =>{this.props.navigation.goBack()}} >
             <FontAwesome name = 'angle-left' size ={40} backgroundColor={'white'} color={accent1}/>
             </TouchableOpacity>
             </View>
@@ -71,7 +71,7 @@ export default class Sympto extends React.Component{
                     <TouchableOpacity
                     style={{marginLeft:'5%',backgroundColor:accent2,height:35,borderRadius:20,width:'15%',marginTop:'2%'}}
                     onPress={() => this.props.navigation.navigate('Remedy',{RemedyType:JSON.stringify(this.tag.itemsSelected),selected:JSON.stringify(this.props.route.params.selected)})}>
-                      <Text style={{alignContent:'center',justifyContent:'center',alignSelf:'center',marginTop:'15%'}}><Icon name="chevron-forward-sharp" color={lightText}></Icon><Icon name="chevron-forward-sharp" color={lightText}></Icon></Text>
+                      <Text style={{alignContent:'center',justifyContent:'center',alignSelf:'center',marginTop:'10%'}}><FontAwesome name="angle-double-right" size={20} color={lightText}/></Text>
                     </TouchableOpacity>
                   </View>
               </View>
