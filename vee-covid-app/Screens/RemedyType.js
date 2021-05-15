@@ -20,6 +20,7 @@ import * as Progress from 'react-native-progress';
 const accent1='#4446AD';
 const accent2='#F4BC1C';
 const lightText='#151410';
+const border='rgb(90,95,190)';
 export default class Sympto extends React.Component{
     render() {
       const data = [
@@ -39,9 +40,12 @@ export default class Sympto extends React.Component{
                 <Text style={[styles.title]}>Choose your Remedy Type?</Text>
                 <View style={{marginTop:"15%",marginLeft:'10%'}}>
                         <TagSelect
-                          theme="info"
+                        
                             data={data}
-                            itemStyle={styles.customItem} 
+                            itemStyle={styles.item}
+                            itemLabelStyle={styles.label}
+                            itemStyleSelected={styles.itemSelected}
+                            itemLabelStyleSelected={styles.labelSelected}
                             ref={(tag) => {
                                   this.tag = tag;
                             }}
@@ -136,4 +140,20 @@ innerbox:{
       marginTop:"2%",
       backgroundColor:"white"
 },
-  });
+item: {
+  borderWidth: 1,
+  borderColor: border,    
+  borderRadius:15,
+  backgroundColor:'white'
+},
+label: {
+  color: accent1
+},
+itemSelected: {
+  backgroundColor: accent1,
+  borderColor:accent1
+},
+labelSelected: {
+  color: 'white',
+},
+});
