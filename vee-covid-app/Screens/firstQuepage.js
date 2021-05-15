@@ -131,7 +131,7 @@ innerbox:{
                   <Progress.Bar progress={0.333} width={250} borderColor={colors.accent1} color={colors.accent2} backgroundColor={'rgb(90,95,190)'}  height={5} marginLeft={'10%'} marginTop={'7%'} />
                 </View>
                 <TouchableOpacity style={{marginLeft:'5%',backgroundColor:colors.accent2,height:35,borderRadius:20,width:'15%',marginTop:'2%'}}>
-                  <Text style={{alignContent:'center',justifyContent:'center',alignSelf:'center',marginTop:'15%'}}><Icon name="chevron-forward-sharp" color={colors.lightText}></Icon><Icon name="chevron-forward-sharp" color={colors.lightText}></Icon></Text>
+                  <Text style={{alignContent:'center',justifyContent:'center',alignSelf:'center',marginTop:'10%'}}><FontAwesome name="angle-double-right" size={20} color={colors.lightText}/></Text>
                 </TouchableOpacity>
               </View>
             </View>
