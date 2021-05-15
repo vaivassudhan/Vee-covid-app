@@ -65,7 +65,7 @@ export function firstQuepage({navigation}){
                         </TouchableOpacity>
                     </Card>
                     <Card style={[styles.cardbutton]}>
-                    <TouchableOpacity onPress={() =>{alert("Please Wear Mask!!!")}} >
+                    <TouchableOpacity onPress={() =>{navigation.navigate('Symptoms')}} >
                         <Card.Content style={{marginTop:20}}>
                             <Image style={{width:50,height:50,alignSelf:'center'}} source={require('../assets/revsmile2.png')}/>
                             <Text style={styles.buttontext2}> Not Well </Text>
