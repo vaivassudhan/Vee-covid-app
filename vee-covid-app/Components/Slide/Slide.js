@@ -90,7 +90,7 @@ export class Slide extends Component {
       <View style={styles.buttonCircle}>
         <Ion
           name="md-checkmark"
-          color="rgba(255, 255, 255, .9)"
+          color={lightText}
           size={24}
         />
       </View>
