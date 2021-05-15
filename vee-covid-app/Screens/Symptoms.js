@@ -19,6 +19,7 @@ import * as Progress from 'react-native-progress';
 import { TagSelect } from 'react-native-tag-select';
 import { useTheme } from '@react-navigation/native';
 const accent1='#4446AD';
+const border='rgb(90,95,190)';
 const accent2='#F4BC1C';
 const lightText='#151410';
 export default class Sympto extends React.Component{
@@ -47,9 +48,12 @@ export default class Sympto extends React.Component{
             <Text style={[styles.title]}>Do you have any of these?</Text>
             <View style={{marginTop:"15%",marginLeft:"15%"}}>
                     <TagSelect
-                      theme="info"
+                      itemStyle={styles.item}
+                      itemLabelStyle={styles.label}
+                      itemStyleSelected={styles.itemSelected}
+                      itemLabelStyleSelected={styles.labelSelected}
                         data={data}
-                        itemStyle={styles.customItem}
+                        
                     
                         ref={(tag) => {
                               this.tag = tag;
@@ -145,4 +149,20 @@ innerbox:{
       marginTop:"2%",
       backgroundColor:"white"
 },
-  });
+item: {
+  borderWidth: 1,
+  borderColor: border,    
+  borderRadius:15,
+  backgroundColor:'white'
+},
+label: {
+  color: accent1
+},
+itemSelected: {
+  backgroundColor: accent1,
+  borderColor:accent1
+},
+labelSelected: {
+  color: 'white',
+},
+});
