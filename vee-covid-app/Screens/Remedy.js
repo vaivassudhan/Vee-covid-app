@@ -184,6 +184,11 @@ innerbox:{
                <Divider/>
             </Card>
             </View>
+            <TouchableOpacity
+                    style={{marginLeft:'5%',backgroundColor:accent2,height:35,borderRadius:20,width:'15%',marginTop:'2%'}}
+                    onPress={() => this.props.navigation.navigate('DetailedPage')}>
+                      <Text style={{alignContent:'center',justifyContent:'center',alignSelf:'center',marginTop:'10%'}}><FontAwesome name="angle-double-right" size={20} color={lightText}/></Text>
+                    </TouchableOpacity>
             </SafeAreaView>
             </View>
         )

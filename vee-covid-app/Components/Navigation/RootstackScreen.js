@@ -9,6 +9,9 @@ import firstQuepage from '../../Screens/firstQuepage';
 import Symptoms from '../../Screens/Symptoms';
 import Remedeselect from '../../Screens/RemedyType';
 import Remedy from '../../Screens/Remedy';
+import DetailedPage from '../../Screens/DetailedPage';
+import HospitalList from '../../Screens/HospitalList';
+import SearchPage from '../../Screens/SearchPage';
 const RootStack = createStackNavigator();
 
 const RootStackScreen = ({navigation}) => (
@@ -19,6 +22,9 @@ const RootStackScreen = ({navigation}) => (
         <RootStack.Screen name="Symptoms" component={Symptoms}/>
         <RootStack.Screen name="Remedeselect" component={Remedeselect}/>
         <RootStack.Screen name="Remedy" component={Remedy}/>
+        <RootStack.Screen name="DetailedPage" component={DetailedPage}/>
+        <RootStack.Screen name="HospitalList" component={HospitalList}/>
+        <RootStack.Screen name="SearchPage" component={SearchPage}/>
     </RootStack.Navigator>
 );
 
