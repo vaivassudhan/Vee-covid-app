@@ -42,6 +42,24 @@ progressbar:{
   marginLeft:'5%',
 
 },
+card: {
+    marginLeft:12,
+        marginRight:12,
+        width: '93%',
+        marginTop:50,
+        marginBottom:2,
+        flexDirection:'row',
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 4,
+        },
+        shadowOpacity: 0.30,
+        shadowRadius: 11.95,
+        borderRadius:20,
+
+        elevation: 8,
+  },
    cardbutton:{
      alignItems:'center',
     //  backgroundColor:colors.accent3,
@@ -101,51 +119,20 @@ innerbox:{
   // }, [])
   return (
       <View style={styles.home}>
-              <SafeAreaView>
+        <SafeAreaView>
             <View style={styles.innerbox}>
             
             <View style={{marginTop:30,marginLeft:"7%"}}>       
             {/* <Icon.Button name="chevron-with-circle-left" size={40} backgroundColor={colors.backcard} color={colors.accent1}></Icon.Button>  */}
-            <TouchableOpacity onPress={() =>{navigation.goBack()}} >
-            <FontAwesome name = 'angle-left' size ={40} backgroundColor={colors.backcard} color={colors.accent1}/>
-            </TouchableOpacity>
+            <Card style={[styles.card,{backgroundColor:colors.accent1}]}>
+            <Card.Content style={{marginTop:20}}>
+              <Text style={{color:colors.menu ,fontSize:15 ,paddingBottom:10}}>Action</Text>
+              <Text style={{color:colors.text ,fontWeight:'bold',fontSize:20 ,paddingBottom:20}}>Add Vehicle</Text>
+            </Card.Content>
+        </Card>
             </View>
-            <StatusBar backgroundColor={colors.accent1} barStyle="light-content"/>
-                    <Text style={[styles.title]}>Are you feeling good today?</Text>
-                    
-                   <Card.Actions style={{paddingHorizontal:30}}>
-                   <Card style={[styles.cardbutton]}>
-                        <TouchableOpacity onPress={() =>{alert("Please Wear Mask!!!")}} >
-                        <Card.Content style={{marginTop:20}}>
-                            <Image style={{width:50,height:50,alignSelf:'center'}} source={require('../assets/smile.png')}/>
-                            <Text style={styles.buttontext}> Good! </Text>
-                        </Card.Content>
-                        </TouchableOpacity>
-                    </Card>
-                    <Card style={[styles.cardbutton]}>
-                    <TouchableOpacity onPress={() =>{navigation.navigate('Symptoms')}} >
-                        <Card.Content style={{marginTop:20}}>
-                            <Image style={{width:50,height:50,alignSelf:'center'}} source={require('../assets/revsmile2.png')}/>
-                            <Text style={styles.buttontext2}> Not Well </Text>
-                        </Card.Content>
-                    </TouchableOpacity>
-                    </Card>
-                   </Card.Actions>
-            </View>
-            <View style={{}}>
-              <Text style={[styles.question]} >Question 1/3</Text>
-              <View style={{flexDirection:'row'}}>
-                <View style={{marginTop:'1%'}}>
-                  <Progress.Bar progress={0.333} width={250} borderColor={colors.accent1} color={colors.accent2} backgroundColor={'rgb(90,95,190)'}  height={5} marginLeft={'10%'} marginTop={'7%'} />
-                </View>
-                <TouchableOpacity style={{marginLeft:'5%',backgroundColor:colors.accent2,height:35,borderRadius:20,width:'15%',marginTop:'2%'}}
-                onPress={() => this.props.navigation.navigate('SearchPage')}>
-                  <Text style={{alignContent:'center',justifyContent:'center',alignSelf:'center',marginTop:'10%'}}><FontAwesome name="angle-double-right" size={20} color={colors.lightText}/></Text>
-                </TouchableOpacity>
-              </View>
             </View>
             </SafeAreaView>
             </View>
   )
 }
-export default HospitalList
