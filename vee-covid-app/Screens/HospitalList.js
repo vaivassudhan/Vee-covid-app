@@ -19,35 +19,24 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import * as Progress from 'react-native-progress';
 import { useTheme } from '@react-navigation/native';
 import {FontAwesome,AntDesign} from 'react-native-vector-icons';
-export default function HospitalList() {
+export default function HospitalList({navigation}) {
   const {colors}= useTheme();
   const hospitalList=[]
   const styles = StyleSheet.create({
     title: {    
      //color: '#05375a',
      color: colors.accent1,
-     marginLeft:30,
+     marginLeft:20,
      marginTop:20,
      fontSize: 30,
      fontWeight: 'bold'
- },
- question: {    
-   color: 'white',
-   marginLeft:'7%',
-   marginTop:'10%',
-   fontSize: 16,
-   fontWeight: '400'
-},
-progressbar:{
-  marginLeft:'5%',
-
-},
-card: {
-    marginLeft:12,
-        marginRight:12,
-        width: '93%',
-        marginTop:50,
-        marginBottom:2,
+    },
+    card: {
+        marginLeft:20,
+        marginRight:20,
+        width: '90%',
+        marginTop:5,
+        marginBottom:25,
         flexDirection:'row',
         shadowColor: "#000",
         shadowOffset: {
@@ -104,7 +93,7 @@ card: {
 },
 innerbox:{
      width:"96%",
-     height:"80%",
+     height:"98%",
      borderRadius:30,
      marginHorizontal:"2%",
      marginTop:"2%",
@@ -121,18 +110,87 @@ innerbox:{
       <View style={styles.home}>
         <SafeAreaView>
             <View style={styles.innerbox}>
-            
-            <View style={{marginTop:30,marginLeft:"7%"}}>       
-            {/* <Icon.Button name="chevron-with-circle-left" size={40} backgroundColor={colors.backcard} color={colors.accent1}></Icon.Button>  */}
-            <Card style={[styles.card,{backgroundColor:colors.accent1}]}>
-            <Card.Content style={{marginTop:20}}>
-              <Text style={{color:colors.menu ,fontSize:15 ,paddingBottom:10}}>Action</Text>
-              <Text style={{color:colors.text ,fontWeight:'bold',fontSize:20 ,paddingBottom:20}}>Add Vehicle</Text>
-            </Card.Content>
-        </Card>
+              <ScrollView style={{margin:5}}>
+              <Title style={styles.title}>Hospital List</Title>
+              <Button onPress={() =>{navigation.navigate('SearchPage')}}>search</Button>
+              <View style={{marginTop:18}}>       
+              {/* <Icon.Button name="chevron-with-circle-left" size={40} backgroundColor={colors.backcard} color={colors.accent1}></Icon.Button>  */}
+                <Card style={[styles.card,{backgroundColor:colors.accent2}]}>
+                  <Card.Content style={{marginTop:20}}>
+                    <Text style={{color:colors.menu ,fontSize:15}}>Salem</Text>
+                    <Text style={{color:colors.menu ,fontSize:15}}>Tamil Nadu</Text>
+                    <Text style={{color:colors.menu ,fontSize:15}}>India</Text>
+                    <Text style={{color:colors.text ,fontWeight:'bold',fontSize:20 ,paddingBottom:20}}>GH Shevapet</Text>
+                  </Card.Content>
+                </Card>
+                <Card style={[styles.card,{backgroundColor:colors.accent2}]}>
+                  <Card.Content style={{marginTop:20}}>
+                    <Text style={{color:colors.menu ,fontSize:15}}>Salem</Text>
+                    <Text style={{color:colors.menu ,fontSize:15}}>Tamil Nadu</Text>
+                    <Text style={{color:colors.menu ,fontSize:15}}>India</Text>
+                    <Text style={{color:colors.text ,fontWeight:'bold',fontSize:20 ,paddingBottom:20}}>GH Shevapet</Text>
+                  </Card.Content>
+                </Card>
+                <Card style={[styles.card,{backgroundColor:colors.accent2}]}>
+                  <Card.Content style={{marginTop:20}}>
+                    <Text style={{color:colors.menu ,fontSize:15}}>Salem</Text>
+                    <Text style={{color:colors.menu ,fontSize:15}}>Tamil Nadu</Text>
+                    <Text style={{color:colors.menu ,fontSize:15}}>India</Text>
+                    <Text style={{color:colors.text ,fontWeight:'bold',fontSize:20 ,paddingBottom:20}}>GH Shevapet</Text>
+                  </Card.Content>
+                </Card>
+                <Card style={[styles.card,{backgroundColor:colors.accent2}]}>
+                  <Card.Content style={{marginTop:20}}>
+                    <Text style={{color:colors.menu ,fontSize:15}}>Salem</Text>
+                    <Text style={{color:colors.menu ,fontSize:15}}>Tamil Nadu</Text>
+                    <Text style={{color:colors.menu ,fontSize:15}}>India</Text>
+                    <Text style={{color:colors.text ,fontWeight:'bold',fontSize:20 ,paddingBottom:20}}>GH Shevapet</Text>
+                  </Card.Content>
+                </Card>
+                <Card style={[styles.card,{backgroundColor:colors.accent2}]}>
+                  <Card.Content style={{marginTop:20}}>
+                    <Text style={{color:colors.menu ,fontSize:15}}>Salem</Text>
+                    <Text style={{color:colors.menu ,fontSize:15}}>Tamil Nadu</Text>
+                    <Text style={{color:colors.menu ,fontSize:15}}>India</Text>
+                    <Text style={{color:colors.text ,fontWeight:'bold',fontSize:20 ,paddingBottom:20}}>GH Shevapet</Text>
+                  </Card.Content>
+                </Card>
+                <Card style={[styles.card,{backgroundColor:colors.accent2}]}>
+                  <Card.Content style={{marginTop:20}}>
+                    <Text style={{color:colors.menu ,fontSize:15}}>Salem</Text>
+                    <Text style={{color:colors.menu ,fontSize:15}}>Tamil Nadu</Text>
+                    <Text style={{color:colors.menu ,fontSize:15}}>India</Text>
+                    <Text style={{color:colors.text ,fontWeight:'bold',fontSize:20 ,paddingBottom:20}}>GH Shevapet</Text>
+                  </Card.Content>
+                </Card>
+                <Card style={[styles.card,{backgroundColor:colors.accent2}]}>
+                  <Card.Content style={{marginTop:20}}>
+                    <Text style={{color:colors.menu ,fontSize:15}}>Salem</Text>
+                    <Text style={{color:colors.menu ,fontSize:15}}>Tamil Nadu</Text>
+                    <Text style={{color:colors.menu ,fontSize:15}}>India</Text>
+                    <Text style={{color:colors.text ,fontWeight:'bold',fontSize:20 ,paddingBottom:20}}>GH Shevapet</Text>
+                  </Card.Content>
+                </Card>
+                <Card style={[styles.card,{backgroundColor:colors.accent2}]}>
+                  <Card.Content style={{marginTop:20}}>
+                    <Text style={{color:colors.menu ,fontSize:15}}>Salem</Text>
+                    <Text style={{color:colors.menu ,fontSize:15}}>Tamil Nadu</Text>
+                    <Text style={{color:colors.menu ,fontSize:15}}>India</Text>
+                    <Text style={{color:colors.text ,fontWeight:'bold',fontSize:20 ,paddingBottom:20}}>GH Shevapet</Text>
+                  </Card.Content>
+                </Card>
+                <Card style={[styles.card,{backgroundColor:colors.accent2}]}>
+                  <Card.Content style={{marginTop:20}}>
+                    <Text style={{color:colors.menu ,fontSize:15}}>Salem</Text>
+                    <Text style={{color:colors.menu ,fontSize:15}}>Tamil Nadu</Text>
+                    <Text style={{color:colors.menu ,fontSize:15}}>India</Text>
+                    <Text style={{color:colors.text ,fontWeight:'bold',fontSize:20 ,paddingBottom:20}}>GH Shevapet</Text>
+                  </Card.Content>
+                </Card>
+               </View>
+              </ScrollView>
             </View>
-            </View>
-            </SafeAreaView>
-            </View>
+        </SafeAreaView>
+      </View>
   )
 }
