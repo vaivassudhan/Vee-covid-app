@@ -1,10 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component ,useEffect } from 'react'
 import { 
     SafeAreaView,
     View, 
     ScrollView ,
     Text, 
     TouchableOpacity, 
+    TouchableNativeFeedback,
     TextInput,
     Platform,
     StyleSheet ,
@@ -18,8 +19,9 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import * as Progress from 'react-native-progress';
 import { useTheme } from '@react-navigation/native';
 import {FontAwesome,AntDesign} from 'react-native-vector-icons';
-export function firstQuepage({navigation}){
-  const { colors } = useTheme();
+export default function HospitalList() {
+  const {colors}= useTheme();
+  const hospitalList=[]
   const styles = StyleSheet.create({
     title: {    
      //color: '#05375a',
@@ -91,8 +93,14 @@ innerbox:{
      backgroundColor:"white"
 },
  });
-        return (
-            <View style={styles.home}>
+  // useEffect(() => {
+  //   fetch()
+  //   return () => {
+      
+  //   }
+  // }, [])
+  return (
+      <View style={styles.home}>
               <SafeAreaView>
             <View style={styles.innerbox}>
             
@@ -138,8 +146,6 @@ innerbox:{
             </View>
             </SafeAreaView>
             </View>
-        )
-    }
-
-export default firstQuepage
-
+  )
+}
+export default HospitalList
