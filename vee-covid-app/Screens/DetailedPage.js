@@ -103,7 +103,9 @@ hospitalname:{
 },
 hospitaladdress:{
   color:colors.menu ,
-  fontSize:15
+  fontSize:15,
+  marginLeft:'10%',
+  marginTop:2
 },
  });
         return (
