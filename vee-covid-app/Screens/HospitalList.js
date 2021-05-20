@@ -116,7 +116,7 @@ hospitaladdress:{
         <SafeAreaView>
             <View style={styles.innerbox}>
               <Title style={styles.title}>Hospital List</Title>
-              <Button onPress={() =>{navigation.navigate('DetailedPage')}}>search</Button>
+              <Button onPress={() =>{navigation.navigate('SearchPage')}}>search</Button>
               <ScrollView style={{margin:5}}>
               <View style={{marginTop:18}}>       
                 <Card style={[styles.card]}>
