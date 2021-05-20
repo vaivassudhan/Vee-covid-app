@@ -21,8 +21,7 @@ import {FontAwesome,AntDesign} from 'react-native-vector-icons';
 export function DetailedPage(props){
   const [Details ,setDetails] =useState('')
   useEffect(() => {
-    console.log(props.route.params.HospitalDetail)
-    setDetails(Details)
+    setDetails(props.route.params.HospitalDetail)
 
   }, [])
   const { colors } = useTheme();
