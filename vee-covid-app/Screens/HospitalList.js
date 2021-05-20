@@ -34,8 +34,8 @@ export default function HospitalList({navigation}) {
         marginLeft:20,
         marginRight:20,
         width: '90%',
-        marginTop:5,
-        marginBottom:25,
+        marginTop:25,
+        marginBottom:5,
         flexDirection:'row',
         shadowColor: "#000",
         shadowOffset: {
@@ -48,25 +48,6 @@ export default function HospitalList({navigation}) {
 
         elevation: 8,
   },
-   cardbutton:{
-     alignItems:'center',
-    //  backgroundColor:colors.accent3,
-     height:'50%',
-     width:'35%',
-     marginTop:'5%',
-     margin:25,
-     justifyContent:'center',
-     shadowColor: colors.text,
-     shadowOffset: {
-         width: 0,
-         height: 9,
-     },
-     shadowOpacity: 0.80,
-     shadowRadius: 11.95,
-     borderRadius:20,
-     borderColor:'grey',
-     elevation: 2,
-   },
    buttontext:{
      color:colors.accent1,
      fontSize:14,
@@ -144,11 +125,21 @@ button:{
       city:"Salem",
       state:"TN"
   },
+  {
+    name:"Hospital4",
+    line1:"salem",
+    line2:"salem",
+    city:"Salem",
+    state:"TN"
+  },
 ]
   return (
       <View style={styles.home}>
         <SafeAreaView>
             <View style={styles.innerbox}>
+            <TouchableOpacity style={{marginTop:30,marginLeft:"7%"}} onPress={() =>{props.navigation.goBack()}} >
+            <FontAwesome name = 'angle-left' size ={40} backgroundColor={colors.backcard} color={colors.accent1}/>
+            </TouchableOpacity>
               <Title style={styles.title}>Hospital List</Title>
               <Button style={styles.button} onPress={() =>{navigation.navigate('SearchPage')}}>
               <FontAwesome name = 'search' size ={15} backgroundColor={colors.backcard}/> search</Button>
