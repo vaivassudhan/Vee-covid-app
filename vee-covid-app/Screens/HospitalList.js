@@ -111,6 +111,37 @@ hospitaladdress:{
   fontSize:15
 }
  });
+
+ const Data=[
+  {
+      name:"Hospital1",
+      line1:"salem",
+      line2:"salem",
+      city:"Salem",
+      state:"TN"
+  },
+  {
+      name:"Hospital2",
+      line1:"salem",
+      line2:"salem",
+      city:"Salem",
+      state:"TN"
+  },
+  {
+      name:"Hospital3",
+      line1:"salem",
+      line2:"salem",
+      city:"Salem",
+      state:"TN"
+  },
+  {
+      name:"Hospital4",
+      line1:"salem",
+      line2:"salem",
+      city:"Salem",
+      state:"TN"
+  },
+]
   return (
       <View style={styles.home}>
         <SafeAreaView>
@@ -118,48 +149,27 @@ hospitaladdress:{
               <Title style={styles.title}>Hospital List</Title>
               <Button onPress={() =>{navigation.navigate('SearchPage')}}>search</Button>
               <ScrollView style={{margin:5}}>
-              <View style={{marginTop:18}}>       
+              {
+             Data.map((u,i) => {
+               return(
+
+                <View key={i}>
+                  <View style={{marginTop:18}}>   
+                <TouchableOpacity onPress={()=>{navigation.navigate('DetailedPage',{HospitalDetail:u})}}>    
                 <Card style={[styles.card]}>
                   <Card.Content style={{marginTop:20}}>
-                    <Text style={styles.hospitalname}>GH Shevapet</Text>
-                    <Text style={styles.hospitaladdress}>Salem</Text>
-                    <Text style={styles.hospitaladdress}>Tamil Nadu</Text>
-                    <Text style={styles.hospitaladdress}>India</Text>
+                    <Text style={styles.hospitalname}>{u.name}</Text>
+                    <Text style={styles.hospitaladdress}>{u.line1}</Text>
+                    <Text style={styles.hospitaladdress}>{u.line2}</Text>
+                    <Text style={styles.hospitaladdress}>{u.city}</Text>
+                    <Text style={styles.hospitaladdress}>{u.state}</Text>
                   </Card.Content>
                 </Card>
-                <Card style={[styles.card]}>
-                  <Card.Content style={{marginTop:20}}>
-                    <Text style={styles.hospitalname}>GH Shevapet</Text>
-                    <Text style={styles.hospitaladdress}>Salem</Text>
-                    <Text style={styles.hospitaladdress}>Tamil Nadu</Text>
-                    <Text style={styles.hospitaladdress}>India</Text>
-                  </Card.Content>
-                </Card>
-                <Card style={[styles.card]}>
-                  <Card.Content style={{marginTop:20}}>
-                    <Text style={styles.hospitalname}>GH Shevapet</Text>
-                    <Text style={styles.hospitaladdress}>Salem</Text>
-                    <Text style={styles.hospitaladdress}>Tamil Nadu</Text>
-                    <Text style={styles.hospitaladdress}>India</Text>
-                  </Card.Content>
-                </Card>
-                <Card style={[styles.card]}>
-                  <Card.Content style={{marginTop:20}}>
-                    <Text style={styles.hospitalname}>GH Shevapet</Text>
-                    <Text style={styles.hospitaladdress}>Salem</Text>
-                    <Text style={styles.hospitaladdress}>Tamil Nadu</Text>
-                    <Text style={styles.hospitaladdress}>India</Text>
-                  </Card.Content>
-                </Card>
-                <Card style={[styles.card]}>
-                  <Card.Content style={{marginTop:20}}>
-                    <Text style={styles.hospitalname}>GH Shevapet</Text>
-                    <Text style={styles.hospitaladdress}>Salem</Text>
-                    <Text style={styles.hospitaladdress}>Tamil Nadu</Text>
-                    <Text style={styles.hospitaladdress}>India</Text>
-                  </Card.Content>
-                </Card>
-               </View>
+                </TouchableOpacity>
+                </View>
+                </View>
+               )
+             })}
               </ScrollView>
             </View>
         </SafeAreaView>
