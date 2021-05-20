@@ -24,9 +24,7 @@ export default function HospitalList({navigation}) {
   const hospitalList=[]
   const styles = StyleSheet.create({
     title: {    
-     //color: '#05375a',
      color: colors.accent1,
-     marginLeft:20,
      marginTop:20,
      fontSize: 30,
      fontWeight: 'bold',
@@ -109,6 +107,11 @@ hospitalname:{
 hospitaladdress:{
   color:colors.menu ,
   fontSize:15
+},
+button:{
+  backgroundColor:'#eee',
+  width:'35%',
+  alignSelf:'center'
 }
  });
 
@@ -147,17 +150,18 @@ hospitaladdress:{
         <SafeAreaView>
             <View style={styles.innerbox}>
               <Title style={styles.title}>Hospital List</Title>
-              <Button onPress={() =>{navigation.navigate('SearchPage')}}>search</Button>
+              <Button style={styles.button} onPress={() =>{navigation.navigate('SearchPage')}}>
+              <FontAwesome name = 'search' size ={15} backgroundColor={colors.backcard}/> search</Button>
               <ScrollView style={{margin:5}}>
               {
              Data.map((u,i) => {
                return(
 
                 <View key={i}>
-                  <View style={{marginTop:18}}>   
+                   
                 <TouchableOpacity onPress={()=>{navigation.navigate('DetailedPage',{HospitalDetail:u})}}>    
                 <Card style={[styles.card]}>
-                  <Card.Content style={{marginTop:20}}>
+                  <Card.Content style={{marginTop:5}}>
                     <Text style={styles.hospitalname}>{u.name}</Text>
                     <Text style={styles.hospitaladdress}>{u.line1}</Text>
                     <Text style={styles.hospitaladdress}>{u.line2}</Text>
@@ -166,7 +170,6 @@ hospitaladdress:{
                   </Card.Content>
                 </Card>
                 </TouchableOpacity>
-                </View>
                 </View>
                )
              })}
