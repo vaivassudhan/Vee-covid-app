@@ -29,7 +29,8 @@ export default function HospitalList({navigation}) {
      marginLeft:20,
      marginTop:20,
      fontSize: 30,
-     fontWeight: 'bold'
+     fontWeight: 'bold',
+     alignSelf:'center'
     },
     card: {
         marginLeft:20,
