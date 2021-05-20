@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component ,useEffect , useState} from 'react'
 import { 
     SafeAreaView,
     View, 
@@ -18,7 +18,13 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import * as Progress from 'react-native-progress';
 import { useTheme } from '@react-navigation/native';
 import {FontAwesome,AntDesign} from 'react-native-vector-icons';
-export function firstQuepage({navigation}){
+export function DetailedPage(props){
+  const [Details ,setDetails] =useState('')
+  useEffect(() => {
+    console.log(props.route.params.HospitalDetail)
+    setDetails(Details)
+
+  }, [])
   const { colors } = useTheme();
   const styles = StyleSheet.create({
     title: {    
@@ -84,7 +90,7 @@ progressbar:{
 },
 innerbox:{
      width:"96%",
-     height:"80%",
+     height:"98%",
      borderRadius:30,
      marginHorizontal:"2%",
      marginTop:"2%",
@@ -98,7 +104,7 @@ innerbox:{
             
             <View style={{marginTop:30,marginLeft:"7%"}}>       
             {/* <Icon.Button name="chevron-with-circle-left" size={40} backgroundColor={colors.backcard} color={colors.accent1}></Icon.Button>  */}
-            <TouchableOpacity onPress={() =>{navigation.goBack()}} >
+            <TouchableOpacity onPress={() =>{props.navigation.goBack()}} >
             <FontAwesome name = 'angle-left' size ={40} backgroundColor={colors.backcard} color={colors.accent1}/>
             </TouchableOpacity>
             </View>
@@ -112,5 +118,5 @@ innerbox:{
         )
     }
 
-export default firstQuepage
+export default DetailedPage
 
