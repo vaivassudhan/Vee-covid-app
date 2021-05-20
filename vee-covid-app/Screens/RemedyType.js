@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import CheckBoxes from '../Components/checkboxes';
+// import CheckBoxes from '../Components/checkboxes';
 import { 
     SafeAreaView, 
     ScrollView ,

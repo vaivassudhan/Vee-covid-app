@@ -99,92 +99,63 @@ innerbox:{
      marginTop:"2%",
      backgroundColor:"white"
 },
+hospitalname:{
+  color:colors.text ,
+  fontWeight:'bold',
+  fontSize:20 ,
+  paddingBottom:10
+},
+hospitaladdress:{
+  color:colors.menu ,
+  fontSize:15
+}
  });
-  // useEffect(() => {
-  //   fetch()
-  //   return () => {
-      
-  //   }
-  // }, [])
   return (
       <View style={styles.home}>
         <SafeAreaView>
             <View style={styles.innerbox}>
-              <ScrollView style={{margin:5}}>
               <Title style={styles.title}>Hospital List</Title>
               <Button onPress={() =>{navigation.navigate('SearchPage')}}>search</Button>
+              <ScrollView style={{margin:5}}>
               <View style={{marginTop:18}}>       
-              {/* <Icon.Button name="chevron-with-circle-left" size={40} backgroundColor={colors.backcard} color={colors.accent1}></Icon.Button>  */}
-                <Card style={[styles.card,{backgroundColor:colors.accent2}]}>
+                <Card style={[styles.card]}>
                   <Card.Content style={{marginTop:20}}>
-                    <Text style={{color:colors.menu ,fontSize:15}}>Salem</Text>
-                    <Text style={{color:colors.menu ,fontSize:15}}>Tamil Nadu</Text>
-                    <Text style={{color:colors.menu ,fontSize:15}}>India</Text>
-                    <Text style={{color:colors.text ,fontWeight:'bold',fontSize:20 ,paddingBottom:20}}>GH Shevapet</Text>
+                    <Text style={styles.hospitalname}>GH Shevapet</Text>
+                    <Text style={styles.hospitaladdress}>Salem</Text>
+                    <Text style={styles.hospitaladdress}>Tamil Nadu</Text>
+                    <Text style={styles.hospitaladdress}>India</Text>
                   </Card.Content>
                 </Card>
-                <Card style={[styles.card,{backgroundColor:colors.accent2}]}>
+                <Card style={[styles.card]}>
                   <Card.Content style={{marginTop:20}}>
-                    <Text style={{color:colors.menu ,fontSize:15}}>Salem</Text>
-                    <Text style={{color:colors.menu ,fontSize:15}}>Tamil Nadu</Text>
-                    <Text style={{color:colors.menu ,fontSize:15}}>India</Text>
-                    <Text style={{color:colors.text ,fontWeight:'bold',fontSize:20 ,paddingBottom:20}}>GH Shevapet</Text>
+                    <Text style={styles.hospitalname}>GH Shevapet</Text>
+                    <Text style={styles.hospitaladdress}>Salem</Text>
+                    <Text style={styles.hospitaladdress}>Tamil Nadu</Text>
+                    <Text style={styles.hospitaladdress}>India</Text>
                   </Card.Content>
                 </Card>
-                <Card style={[styles.card,{backgroundColor:colors.accent2}]}>
+                <Card style={[styles.card]}>
                   <Card.Content style={{marginTop:20}}>
-                    <Text style={{color:colors.menu ,fontSize:15}}>Salem</Text>
-                    <Text style={{color:colors.menu ,fontSize:15}}>Tamil Nadu</Text>
-                    <Text style={{color:colors.menu ,fontSize:15}}>India</Text>
-                    <Text style={{color:colors.text ,fontWeight:'bold',fontSize:20 ,paddingBottom:20}}>GH Shevapet</Text>
+                    <Text style={styles.hospitalname}>GH Shevapet</Text>
+                    <Text style={styles.hospitaladdress}>Salem</Text>
+                    <Text style={styles.hospitaladdress}>Tamil Nadu</Text>
+                    <Text style={styles.hospitaladdress}>India</Text>
                   </Card.Content>
                 </Card>
-                <Card style={[styles.card,{backgroundColor:colors.accent2}]}>
+                <Card style={[styles.card]}>
                   <Card.Content style={{marginTop:20}}>
-                    <Text style={{color:colors.menu ,fontSize:15}}>Salem</Text>
-                    <Text style={{color:colors.menu ,fontSize:15}}>Tamil Nadu</Text>
-                    <Text style={{color:colors.menu ,fontSize:15}}>India</Text>
-                    <Text style={{color:colors.text ,fontWeight:'bold',fontSize:20 ,paddingBottom:20}}>GH Shevapet</Text>
+                    <Text style={styles.hospitalname}>GH Shevapet</Text>
+                    <Text style={styles.hospitaladdress}>Salem</Text>
+                    <Text style={styles.hospitaladdress}>Tamil Nadu</Text>
+                    <Text style={styles.hospitaladdress}>India</Text>
                   </Card.Content>
                 </Card>
-                <Card style={[styles.card,{backgroundColor:colors.accent2}]}>
+                <Card style={[styles.card]}>
                   <Card.Content style={{marginTop:20}}>
-                    <Text style={{color:colors.menu ,fontSize:15}}>Salem</Text>
-                    <Text style={{color:colors.menu ,fontSize:15}}>Tamil Nadu</Text>
-                    <Text style={{color:colors.menu ,fontSize:15}}>India</Text>
-                    <Text style={{color:colors.text ,fontWeight:'bold',fontSize:20 ,paddingBottom:20}}>GH Shevapet</Text>
-                  </Card.Content>
-                </Card>
-                <Card style={[styles.card,{backgroundColor:colors.accent2}]}>
-                  <Card.Content style={{marginTop:20}}>
-                    <Text style={{color:colors.menu ,fontSize:15}}>Salem</Text>
-                    <Text style={{color:colors.menu ,fontSize:15}}>Tamil Nadu</Text>
-                    <Text style={{color:colors.menu ,fontSize:15}}>India</Text>
-                    <Text style={{color:colors.text ,fontWeight:'bold',fontSize:20 ,paddingBottom:20}}>GH Shevapet</Text>
-                  </Card.Content>
-                </Card>
-                <Card style={[styles.card,{backgroundColor:colors.accent2}]}>
-                  <Card.Content style={{marginTop:20}}>
-                    <Text style={{color:colors.menu ,fontSize:15}}>Salem</Text>
-                    <Text style={{color:colors.menu ,fontSize:15}}>Tamil Nadu</Text>
-                    <Text style={{color:colors.menu ,fontSize:15}}>India</Text>
-                    <Text style={{color:colors.text ,fontWeight:'bold',fontSize:20 ,paddingBottom:20}}>GH Shevapet</Text>
-                  </Card.Content>
-                </Card>
-                <Card style={[styles.card,{backgroundColor:colors.accent2}]}>
-                  <Card.Content style={{marginTop:20}}>
-                    <Text style={{color:colors.menu ,fontSize:15}}>Salem</Text>
-                    <Text style={{color:colors.menu ,fontSize:15}}>Tamil Nadu</Text>
-                    <Text style={{color:colors.menu ,fontSize:15}}>India</Text>
-                    <Text style={{color:colors.text ,fontWeight:'bold',fontSize:20 ,paddingBottom:20}}>GH Shevapet</Text>
-                  </Card.Content>
-                </Card>
-                <Card style={[styles.card,{backgroundColor:colors.accent2}]}>
-                  <Card.Content style={{marginTop:20}}>
-                    <Text style={{color:colors.menu ,fontSize:15}}>Salem</Text>
-                    <Text style={{color:colors.menu ,fontSize:15}}>Tamil Nadu</Text>
-                    <Text style={{color:colors.menu ,fontSize:15}}>India</Text>
-                    <Text style={{color:colors.text ,fontWeight:'bold',fontSize:20 ,paddingBottom:20}}>GH Shevapet</Text>
+                    <Text style={styles.hospitalname}>GH Shevapet</Text>
+                    <Text style={styles.hospitaladdress}>Salem</Text>
+                    <Text style={styles.hospitaladdress}>Tamil Nadu</Text>
+                    <Text style={styles.hospitaladdress}>India</Text>
                   </Card.Content>
                 </Card>
                </View>
