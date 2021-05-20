@@ -26,7 +26,7 @@ export default function HospitalList({navigation}) {
     title: {    
      color: colors.accent1,
      marginTop:40,
-     marginRight:10,
+     marginLeft:8,
      marginBottom:10,
      fontSize: 30,
      fontWeight: 'bold',
@@ -140,7 +140,7 @@ button:{
         <SafeAreaView>
             <View style={styles.innerbox}>
               <View style={{flexDirection:'row'}}>
-            <TouchableOpacity style={{marginTop:30,marginLeft:"7%",width:'20%'}} onPress={() =>{props.navigation.goBack()}} >
+            <TouchableOpacity style={{marginTop:30,marginLeft:"7%",width:'20%'}} onPress={() =>{navigation.goBack()}} >
             <FontAwesome name = 'angle-left' size ={40} backgroundColor={colors.backcard} color={colors.accent1}/>
             </TouchableOpacity>
               <Title style={styles.title}>Hospital List</Title>
