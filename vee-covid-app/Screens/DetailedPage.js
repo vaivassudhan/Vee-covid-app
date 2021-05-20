@@ -18,7 +18,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import * as Progress from 'react-native-progress';
 import { useTheme } from '@react-navigation/native';
 import {FontAwesome,AntDesign} from 'react-native-vector-icons';
-export function firstQuepage(props){
+export function DetailedPage(props){
   const [Details ,setDetails] =useState('')
   useEffect(() => {
     console.log(props.route.params.HospitalDetail)
@@ -104,7 +104,7 @@ innerbox:{
             
             <View style={{marginTop:30,marginLeft:"7%"}}>       
             {/* <Icon.Button name="chevron-with-circle-left" size={40} backgroundColor={colors.backcard} color={colors.accent1}></Icon.Button>  */}
-            <TouchableOpacity onPress={() =>{navigation.goBack()}} >
+            <TouchableOpacity onPress={() =>{props.navigation.goBack()}} >
             <FontAwesome name = 'angle-left' size ={40} backgroundColor={colors.backcard} color={colors.accent1}/>
             </TouchableOpacity>
             </View>
@@ -118,5 +118,5 @@ innerbox:{
         )
     }
 
-export default firstQuepage
+export default DetailedPage
 
