@@ -25,7 +25,9 @@ export default function HospitalList({navigation}) {
   const styles = StyleSheet.create({
     title: {    
      color: colors.accent1,
-     marginTop:20,
+     marginTop:40,
+     marginLeft:8,
+     marginBottom:10,
      fontSize: 30,
      fontWeight: 'bold',
      alignSelf:'center'
@@ -91,7 +93,7 @@ hospitaladdress:{
 },
 button:{
   backgroundColor:'#eee',
-  width:'35%',
+  width:'30%',
   alignSelf:'center'
 }
  });
@@ -137,10 +139,12 @@ button:{
       <View style={styles.home}>
         <SafeAreaView>
             <View style={styles.innerbox}>
-            <TouchableOpacity style={{marginTop:30,marginLeft:"7%"}} onPress={() =>{props.navigation.goBack()}} >
+              <View style={{flexDirection:'row'}}>
+            <TouchableOpacity style={{marginTop:30,marginLeft:"7%",width:'20%'}} onPress={() =>{navigation.goBack()}} >
             <FontAwesome name = 'angle-left' size ={40} backgroundColor={colors.backcard} color={colors.accent1}/>
             </TouchableOpacity>
               <Title style={styles.title}>Hospital List</Title>
+              </View>
               <Button style={styles.button} onPress={() =>{navigation.navigate('SearchPage')}}>
               <FontAwesome name = 'search' size ={15} backgroundColor={colors.backcard}/> search</Button>
               <ScrollView style={{margin:5}}>
