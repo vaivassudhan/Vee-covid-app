@@ -33,18 +33,15 @@ export function DetailedPage(props){
      marginTop:20,
      fontSize: 30,
      fontWeight: 'bold'
- },
- question: {    
-   color: 'white',
-   marginLeft:'7%',
-   marginTop:'10%',
-   fontSize: 16,
-   fontWeight: '400'
-},
-progressbar:{
-  marginLeft:'5%',
-
-},
+    },
+    title2: {    
+      //color: '#05375a',
+      color: colors.accent1,
+      marginLeft:30,
+      marginTop:20,
+      fontSize: 20,
+      fontWeight: 'bold'
+    },
    cardbutton:{
      alignItems:'center',
     //  backgroundColor:colors.accent3,
@@ -103,7 +100,7 @@ hospitalname:{
 },
 hospitaladdress:{
   color:colors.menu ,
-  fontSize:15,
+  fontSize:20,
   marginLeft:'10%',
   marginTop:2
 },
@@ -120,8 +117,8 @@ hospitaladdress:{
             </TouchableOpacity>
             </View>
             <StatusBar backgroundColor={colors.accent1} barStyle="light-content"/>
-                    <Text style={[styles.title]}>Details Page</Text>
                     <Text style={styles.title}>{Details.name}</Text>
+                    <Text style={styles.title2}>Address</Text>
                     <Text style={styles.hospitaladdress}>{Details.line1}</Text>
                     <Text style={styles.hospitaladdress}>{Details.line2}</Text>
                     <Text style={styles.hospitaladdress}>{Details.city}</Text>
