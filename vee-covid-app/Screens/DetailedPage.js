@@ -96,6 +96,16 @@ innerbox:{
      marginTop:"2%",
      backgroundColor:"white"
 },
+hospitalname:{
+  color:colors.text ,
+  fontWeight:'bold',
+  fontSize:20 ,
+  paddingBottom:10
+},
+hospitaladdress:{
+  color:colors.menu ,
+  fontSize:15
+},
  });
         return (
             <View style={styles.home}>
@@ -110,7 +120,11 @@ innerbox:{
             </View>
             <StatusBar backgroundColor={colors.accent1} barStyle="light-content"/>
                     <Text style={[styles.title]}>Details Page</Text>
-                    
+                    <Text style={styles.title}>{Details.name}</Text>
+                    <Text style={styles.hospitaladdress}>{Details.line1}</Text>
+                    <Text style={styles.hospitaladdress}>{Details.line2}</Text>
+                    <Text style={styles.hospitaladdress}>{Details.city}</Text>
+                    <Text style={styles.hospitaladdress}>{Details.state}</Text>
                    
             </View>
             </SafeAreaView>
