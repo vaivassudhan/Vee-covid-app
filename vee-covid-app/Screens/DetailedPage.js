@@ -103,38 +103,9 @@ innerbox:{
             </TouchableOpacity>
             </View>
             <StatusBar backgroundColor={colors.accent1} barStyle="light-content"/>
-                    <Text style={[styles.title]}>Are you feeling good today?</Text>
+                    <Text style={[styles.title]}>Details Page</Text>
                     
-                   <Card.Actions style={{paddingHorizontal:30}}>
-                   <Card style={[styles.cardbutton]}>
-                        <TouchableOpacity onPress={() =>{alert("Please Wear Mask!!!")}} >
-                        <Card.Content style={{marginTop:20}}>
-                            <Image style={{width:50,height:50,alignSelf:'center'}} source={require('../assets/smile.png')}/>
-                            <Text style={styles.buttontext}> Good! </Text>
-                        </Card.Content>
-                        </TouchableOpacity>
-                    </Card>
-                    <Card style={[styles.cardbutton]}>
-                    <TouchableOpacity onPress={() =>{navigation.navigate('Symptoms')}} >
-                        <Card.Content style={{marginTop:20}}>
-                            <Image style={{width:50,height:50,alignSelf:'center'}} source={require('../assets/revsmile2.png')}/>
-                            <Text style={styles.buttontext2}> Not Well </Text>
-                        </Card.Content>
-                    </TouchableOpacity>
-                    </Card>
-                   </Card.Actions>
-            </View>
-            <View style={{}}>
-              <Text style={[styles.question]} >Question 1/3</Text>
-              <View style={{flexDirection:'row'}}>
-                <View style={{marginTop:'1%'}}>
-                  <Progress.Bar progress={0.333} width={250} borderColor={colors.accent1} color={colors.accent2} backgroundColor={'rgb(90,95,190)'}  height={5} marginLeft={'10%'} marginTop={'7%'} />
-                </View>
-                <TouchableOpacity style={{marginLeft:'5%',backgroundColor:colors.accent2,height:35,borderRadius:20,width:'15%',marginTop:'2%' }}
-                onPress={() => navigation.navigate('HospitalList')}>
-                  <Text style={{alignContent:'center',justifyContent:'center',alignSelf:'center',marginTop:'10%'}}><FontAwesome name="angle-double-right" size={20} color={colors.lightText}/></Text>
-                </TouchableOpacity>
-              </View>
+                   
             </View>
             </SafeAreaView>
             </View>
