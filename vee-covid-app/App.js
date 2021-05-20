@@ -8,7 +8,7 @@ import {
     DefaultTheme as PaperDefaultTheme,
     DarkTheme as PaperDarkTheme 
   } from 'react-native-paper';
-import RootStackScreen from './components/Navigation/RootstackScreen';
+import RootStackScreen from './Components/Navigation/RootstackScreen';
 
 import { enableScreens } from 'react-native-screens';
 
